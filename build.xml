@@ -1,0 +1,67 @@
+<project name="cell-types" default="dist" basedir=".">
+    <description>
+		Example build file.
+    </description>
+
+	<property name="javadir" location="java" />
+	<property name="src" location="${javadir}/src"/>
+	<property name="lib"  location="${javadir}/lib"/>
+	<property name="build" location="${javadir}/build"/>
+	<property name="dist"  location="dist"/>
+	<property name="docs"  location="${dist}/docs"/>
+	<property name="project"  value="cell-types"/>
+	<property name="latestjar" location="${dist}/lib/${project}.jar" />
+
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="docs" depends="init" description="builds documentation" >
+		<mkdir dir="${docs}" />
+		<javadoc sourcepath="${src}" destdir="${docs}" >
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+  
+	<target name="build" depends="init" description="compile the source " >
+		<javac destdir="${build}" includeantruntime="false">
+			<src path="${src}" />
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javac> 
+	</target>
+
+	<target name="jar" depends="build" description="generate the jar file" >
+		<mkdir dir="${dist}/lib"/>
+		<property name="jarpath" location="${dist}/lib/${project}-${DSTAMP}.jar" />
+
+		<jar destfile="${jarpath}">
+			<fileset dir="${build}/" />
+			<restrict>
+				<name name="**/*.class"/>
+				<archives>
+					<zips>
+						<fileset dir="${lib}" includes="**/*.jar"/>
+					</zips>
+				</archives>
+			</restrict>
+			<manifest>
+				<attribute name="Main-Class" value="org.sc.obo.OBOParser"/> 
+			</manifest>
+		</jar>
+		<copy file="${jarpath}" tofile="${latestjar}" />
+	</target>
+
+	<target name="clean" description="clean up" >
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>

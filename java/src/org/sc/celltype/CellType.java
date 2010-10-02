@@ -50,7 +50,7 @@ interface FibroblastNeuralCrestDerived extends Fibroblast {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell FibroblastNeuralCrestDerived_develops_from();
+	public CranialNeuralCrestCell[] FibroblastNeuralCrestDerived_develops_from();
 }
 
 
@@ -221,7 +221,7 @@ interface NurseCell extends PolyploidCell, AnimalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public Cystoblast NurseCell_develops_from();
+	public Cystoblast[] NurseCell_develops_from();
 }
 
 
@@ -232,7 +232,7 @@ interface SmoothMuscleCellNeuralCrestDerived extends SmoothMuscleCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell SmoothMuscleCellNeuralCrestDerived_develops_from();
+	public CranialNeuralCrestCell[] SmoothMuscleCellNeuralCrestDerived_develops_from();
 }
 
 
@@ -243,7 +243,7 @@ interface CNSNeuronSensuNematodaAndProtostomia extends Neuron {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuroblastSensuNematodaAndProtostomia CNSNeuronSensuNematodaAndProtostomia_develops_from();
+	public NeuroblastSensuNematodaAndProtostomia[] CNSNeuronSensuNematodaAndProtostomia_develops_from();
 }
 
 
@@ -254,7 +254,7 @@ interface NeuronNeuralCrestDerived extends Neuron {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuralCrestCell NeuronNeuralCrestDerived_develops_from();
+	public NeuralCrestCell[] NeuronNeuralCrestDerived_develops_from();
 }
 
 
@@ -265,7 +265,7 @@ interface Glioblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeurectodermalCell Glioblast_develops_from();
+	public NeurectodermalCell[] Glioblast_develops_from();
 }
 
 
@@ -284,7 +284,7 @@ interface NeuroplacodalCell extends AnimalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public SurfaceEctodermalCell NeuroplacodalCell_develops_from();
+	public SurfaceEctodermalCell[] NeuroplacodalCell_develops_from();
 }
 
 
@@ -327,7 +327,7 @@ interface HematopoieticStemCell extends MultiFateStemCell {
 	public static String def = "\"A stem cell from which all cells of the lymphoid and myeloid lineages develop, including blood cells and cells of the immune system.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public AngioblasticMesenchymalCell HematopoieticStemCell_develops_from();
+	public AngioblasticMesenchymalCell[] HematopoieticStemCell_develops_from();
 }
 
 
@@ -338,7 +338,7 @@ interface ErythroidProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to the erythroid lineage.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public MegakaryocyteErythroidProgenitorCell ErythroidProgenitorCell_develops_from();
+	public MegakaryocyteErythroidProgenitorCell[] ErythroidProgenitorCell_develops_from();
 }
 
 
@@ -357,7 +357,7 @@ interface Monoblast extends MyeloidProgenitorCell {
 	public static String def = "\"A myeloid progenitor cell committed to the monocyte lineage.\" [GOC:add, http://www.clt.astate.edu/wwilliam/, http://www.copewithcytokines.de, PMID:1104740]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell Monoblast_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] Monoblast_develops_from();
 }
 
 
@@ -368,10 +368,10 @@ interface MatureEosinophil extends Eosinophil {
 	public static String def = "\"A fully differentiated eosinophil, a granular leukocyte with a nucleus that usually has two lobes connected by one or more slender threads of chromatin, and cytoplasm containing coarse, round granules that are uniform in size and which can be stained by the dye eosin.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public ImmatureEosinophil MatureEosinophil_develops_from();
+	public ImmatureEosinophil[] MatureEosinophil_develops_from();
 
 	@Relates("develops_from")
-	public BandFormEosinophil MatureEosinophil_develops_from_1();
+	public BandFormEosinophil[] MatureEosinophil_develops_from_1();
 }
 
 
@@ -382,7 +382,7 @@ interface NeutrophilicMyeloblast extends Myeloblast {
 	public static String def = "\"A myeloblast committed to the neutrophil lineage. A myeloblast is the most primitive precursor in the granulocytic series, having fine, evenly distributed chromatin, several nucleoli, and a nongranular basophilic cytoplasm.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilProgenitorCell NeutrophilicMyeloblast_develops_from();
+	public NeutrophilProgenitorCell[] NeutrophilicMyeloblast_develops_from();
 }
 
 
@@ -393,10 +393,10 @@ interface MatureBasophil extends Basophil {
 	public static String def = "\"A fully differentiated basophil, a granular leukocyte with an irregularly shaped, pale-staining nucleus that is partially constricted into two lobes, and with cytoplasm that contains coarse, bluish-black granules of variable size. Basophils contain vasoactive amines such as histamine and serotonin, which are released on appropriate stimulation.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public ImmatureBasophil MatureBasophil_develops_from();
+	public ImmatureBasophil[] MatureBasophil_develops_from();
 
 	@Relates("develops_from")
-	public BandFormBasophil MatureBasophil_develops_from_1();
+	public BandFormBasophil[] MatureBasophil_develops_from_1();
 }
 
 
@@ -407,7 +407,7 @@ interface NeuronalStemCell extends MultiFateStemCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeurectodermalCell NeuronalStemCell_develops_from();
+	public NeurectodermalCell[] NeuronalStemCell_develops_from();
 }
 
 
@@ -426,7 +426,7 @@ interface CommonMyeloidProgenitor extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.\" [GOC:add, ISBN:0878932437, PMID:10724173]";
 
 	@Relates("develops_from")
-	public HematopoieticStemCell CommonMyeloidProgenitor_develops_from();
+	public HematopoieticStemCell[] CommonMyeloidProgenitor_develops_from();
 }
 
 
@@ -437,7 +437,7 @@ interface MegakaryocyteErythroidProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to the megakaryocyte and erythroid lineages.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public CommonMyeloidProgenitor MegakaryocyteErythroidProgenitorCell_develops_from();
+	public CommonMyeloidProgenitor[] MegakaryocyteErythroidProgenitorCell_develops_from();
 }
 
 
@@ -448,7 +448,7 @@ interface CommonLymphoidProgenitor extends LymphoidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to the lymphoid lineage with phenotype Lin-negative, CD117-low, Sca-1-low and CD127-positive.\" [GOC:add, PMID:10407577]";
 
 	@Relates("develops_from")
-	public EarlyLymphoidProgenitor CommonLymphoidProgenitor_develops_from();
+	public EarlyLymphoidProgenitor[] CommonLymphoidProgenitor_develops_from();
 }
 
 
@@ -491,7 +491,7 @@ interface Myoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"An embryonic (precursor) cell of the myogenic lineage that develops from the mesoderm. They undergo proliferation, migrate to their various sites, and then differentiate into the appropriate form of myocytes.\" [MESH:A.11.635]";
 
 	@Relates("develops_from")
-	public MuscleStemCell Myoblast_develops_from();
+	public MuscleStemCell[] Myoblast_develops_from();
 }
 
 
@@ -502,7 +502,7 @@ interface Fibroblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules.\" [MESH:A.11.329.228]";
 
 	@Relates("develops_from")
-	public MesenchymalCell Fibroblast_develops_from();
+	public MesenchymalCell[] Fibroblast_develops_from();
 }
 
 
@@ -513,10 +513,10 @@ interface Chondroblast extends NonTerminallyDifferentiatedCell, AnimalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell Chondroblast_develops_from();
+	public MesenchymalCell[] Chondroblast_develops_from();
 
 	@Relates("develops_from")
-	public MesodermalCell Chondroblast_develops_from_1();
+	public MesodermalCell[] Chondroblast_develops_from_1();
 }
 
 
@@ -527,7 +527,7 @@ interface Ameloblast extends NonTerminallyDifferentiatedCell, AnimalCell {
 	public static String def = "\"A cylindrical epithelial cell in the innermost layer of the enamel organ. Their functions include contribution to the development of the dentinoenamel junction by the deposition of a layer of the matrix, thus producing the foundation for the prisms (the structural units of the dental enamel), and production of the matrix for the enamel prisms and interprismatic substance. (From Jablonski's Dictionary of Dentistry, 1992).\" [MESH:A.11.436.107]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Ameloblast_develops_from();
+	public NeuralCrestCell[] Ameloblast_develops_from();
 }
 
 
@@ -538,7 +538,7 @@ interface Odontoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell Odontoblast_develops_from();
+	public CranialNeuralCrestCell[] Odontoblast_develops_from();
 }
 
 
@@ -557,10 +557,10 @@ interface Osteoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A bone-forming cell which secretes an extracellular matrix. Hydroxyapatite crystals are then deposited into the matrix to form bone.\" [MESH:A.11.329.629]";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell Osteoblast_develops_from();
+	public CranialNeuralCrestCell[] Osteoblast_develops_from();
 
 	@Relates("develops_from")
-	public OsteoprogenitorCell Osteoblast_develops_from_1();
+	public OsteoprogenitorCell[] Osteoblast_develops_from_1();
 }
 
 
@@ -587,7 +587,7 @@ interface EpendymalCell extends CiliatedEpithelialCell {
 	public static String def = "\"A neurectoderm derived cell that lines the neural lumen.\" [JB:jb, PMID:9550134]";
 
 	@Relates("develops_from")
-	public NeuroepithelialCell EpendymalCell_develops_from();
+	public NeuroepithelialCell[] EpendymalCell_develops_from();
 }
 
 
@@ -622,13 +622,13 @@ interface BranchedDuctEpithelialCell extends DuctEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public EctodermalCell BranchedDuctEpithelialCell_develops_from();
+	public EctodermalCell[] BranchedDuctEpithelialCell_develops_from();
 
 	@Relates("develops_from")
-	public MesodermalCell BranchedDuctEpithelialCell_develops_from_1();
+	public MesodermalCell[] BranchedDuctEpithelialCell_develops_from_1();
 
 	@Relates("develops_from")
-	public EndodermalCell BranchedDuctEpithelialCell_develops_from_2();
+	public EndodermalCell[] BranchedDuctEpithelialCell_develops_from_2();
 }
 
 
@@ -639,7 +639,7 @@ interface BloodVesselEndothelialCell extends SquamousEpithelialCell, Endothelial
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell BloodVesselEndothelialCell_develops_from();
+	public MesodermalCell[] BloodVesselEndothelialCell_develops_from();
 }
 
 
@@ -650,7 +650,7 @@ interface NonBranchedDuctEpithelialCell extends DuctEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell NonBranchedDuctEpithelialCell_develops_from();
+	public MesodermalCell[] NonBranchedDuctEpithelialCell_develops_from();
 }
 
 
@@ -693,7 +693,7 @@ interface MesothelialCell extends SquamousEpithelialCell, LiningCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell MesothelialCell_develops_from();
+	public MesodermalCell[] MesothelialCell_develops_from();
 }
 
 
@@ -712,7 +712,7 @@ interface StratifiedEpithelialCell extends EpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public StratifiedEpithelialStemCell StratifiedEpithelialCell_develops_from();
+	public StratifiedEpithelialStemCell[] StratifiedEpithelialCell_develops_from();
 }
 
 
@@ -739,7 +739,7 @@ interface EpithelialCellOfLung extends EpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public EndodermalCell EpithelialCellOfLung_develops_from();
+	public EndodermalCell[] EpithelialCellOfLung_develops_from();
 }
 
 
@@ -750,7 +750,7 @@ interface EpithelialCellOfPancreas extends EpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public EndodermalCell EpithelialCellOfPancreas_develops_from();
+	public EndodermalCell[] EpithelialCellOfPancreas_develops_from();
 }
 
 
@@ -761,7 +761,7 @@ interface TCell extends Lymphocyte {
 	public static String def = "\"A type of lymphocyte whose defining characteristic is the expression of a T cell receptor complex.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ProTCell TCell_develops_from();
+	public ProTCell[] TCell_develops_from();
 }
 
 
@@ -828,7 +828,7 @@ interface Osteoclast extends MyeloidLeukocyte {
 	public static String def = "\"A specialized phagocytic cell associated with the absorption and removal of the mineralized matrix of bone tissue, which typically differentiates from monocytes.\" [GO_REF:0000031, GOC:add, ISBN:0781735149, PMID:10428500, PMID:15055519, PMID:17380158]";
 
 	@Relates("develops_from")
-	public Monocyte Osteoclast_develops_from();
+	public Monocyte[] Osteoclast_develops_from();
 }
 
 
@@ -847,7 +847,7 @@ interface NeuronAssociatedCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeurectodermalCell NeuronAssociatedCell_develops_from();
+	public NeurectodermalCell[] NeuronAssociatedCell_develops_from();
 }
 
 
@@ -858,10 +858,10 @@ interface MatureNeutrophil extends Neutrophil {
 	public static String def = "\"A fully differentiated neutrophil, a granular leukocyte having a nucleus with three to five lobes connected by slender threads of chromatin, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes.\" [GOC:add, MESH:A.11.118.637.415.583]";
 
 	@Relates("develops_from")
-	public BandFormNeutrophil MatureNeutrophil_develops_from();
+	public BandFormNeutrophil[] MatureNeutrophil_develops_from();
 
 	@Relates("develops_from")
-	public ImmatureNeutrophil MatureNeutrophil_develops_from_1();
+	public ImmatureNeutrophil[] MatureNeutrophil_develops_from_1();
 }
 
 
@@ -872,7 +872,7 @@ interface MastCell extends MyeloidLeukocyte {
 	public static String def = "\"A cell that is found in almost all tissues containing numerous basophilic granules and capable of releasing large amounts of histamine and heparin upon activation.\" [GOC:add, ISBN:068340007X, MESH:A.11.329.427]";
 
 	@Relates("develops_from")
-	public MastCellProgenitor MastCell_develops_from();
+	public MastCellProgenitor[] MastCell_develops_from();
 }
 
 
@@ -883,7 +883,7 @@ interface SensoryEpithelialCell extends ColumnarCuboidalEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuroepithelialCell SensoryEpithelialCell_develops_from();
+	public NeuroepithelialCell[] SensoryEpithelialCell_develops_from();
 }
 
 
@@ -1038,7 +1038,7 @@ interface CNSNeuronSensuVertebrata extends Neuron {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuroblastSensuVertebrata CNSNeuronSensuVertebrata_develops_from();
+	public NeuroblastSensuVertebrata[] CNSNeuronSensuVertebrata_develops_from();
 }
 
 
@@ -1089,10 +1089,10 @@ interface NeuronAssociatedCellSensuVertebrata {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuronAssociatedCell NeuronAssociatedCellSensuVertebrata_develops_from();
+	public NeuronAssociatedCell[] NeuronAssociatedCellSensuVertebrata_develops_from();
 
 	@Relates("develops_from")
-	public NeuralCrestCell NeuronAssociatedCellSensuVertebrata_develops_from_1();
+	public NeuralCrestCell[] NeuronAssociatedCellSensuVertebrata_develops_from_1();
 }
 
 
@@ -1111,7 +1111,7 @@ interface GlialCell {
 	public static String def = "\"A non-neuronal cell of the nervous system. They not only provide physical support, but also respond to injury, regulate the ionic and chemical composition of the extracellular milieu. Guide neuronal migration during development, and exchange metabolites with neurons.\" [MESH:A.08.637]";
 
 	@Relates("develops_from")
-	public Glioblast GlialCell_develops_from();
+	public Glioblast[] GlialCell_develops_from();
 }
 
 
@@ -1122,7 +1122,7 @@ interface MacroglialCell extends GlialCellSensuVertebrata {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public GlioblastSensuVertebrata MacroglialCell_develops_from();
+	public GlioblastSensuVertebrata[] MacroglialCell_develops_from();
 }
 
 
@@ -1141,7 +1141,7 @@ interface Oligodendrocyte extends MacroglialCell {
 	public static String def = "\"A class of large neuroglial (macroglial) cells in the central nervous system. Form the insulating myelin sheath of axons in the central nervous system.\" [MESH:A.08.637.600]";
 
 	@Relates("develops_from")
-	public GlioblastSensuVertebrata Oligodendrocyte_develops_from();
+	public GlioblastSensuVertebrata[] Oligodendrocyte_develops_from();
 }
 
 
@@ -1168,7 +1168,7 @@ interface GutEndothelialCell extends ColumnarCuboidalEpithelialCell, Endothelial
 	public static String def = "";
 
 	@Relates("develops_from")
-	public EndodermalCell GutEndothelialCell_develops_from();
+	public EndodermalCell[] GutEndothelialCell_develops_from();
 }
 
 
@@ -1179,7 +1179,7 @@ interface CornealEndothelialCell extends SquamousEpithelialCell, EndothelialCell
 	public static String def = "\"Cell of the single layer of large flattened cells covering the surface of the cornea.\" [MESH:A.09.371.060.067.31]";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell CornealEndothelialCell_develops_from();
+	public CranialNeuralCrestCell[] CornealEndothelialCell_develops_from();
 }
 
 
@@ -1198,7 +1198,7 @@ interface MesenchymalCell extends CellByHistology {
 	public static String def = "\"A cell that normally gives rise to other cells that are organized as three-dimensional masses, rather than sheets.\" [FB:ma]";
 
 	@Relates("develops_from")
-	public MesodermalCell MesenchymalCell_develops_from();
+	public MesodermalCell[] MesenchymalCell_develops_from();
 }
 
 
@@ -1209,10 +1209,10 @@ interface Fibrocyte extends StromalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public FibroblastNeuralCrestDerived Fibrocyte_develops_from();
+	public FibroblastNeuralCrestDerived[] Fibrocyte_develops_from();
 
 	@Relates("develops_from")
-	public Fibroblast Fibrocyte_develops_from_1();
+	public Fibroblast[] Fibrocyte_develops_from_1();
 }
 
 
@@ -1223,10 +1223,10 @@ interface FatCell extends StuffAccumulatingCell {
 	public static String def = "\"A fat-storing cell found mostly in the abdominal cavity and subcutaneous tissue of mammals. Fat is usually stored in the form of triglycerides.\" [MESH:A.11.329.114]";
 
 	@Relates("develops_from")
-	public Fibroblast FatCell_develops_from();
+	public Fibroblast[] FatCell_develops_from();
 
 	@Relates("develops_from")
-	public MesenchymalCell FatCell_develops_from_1();
+	public MesenchymalCell[] FatCell_develops_from_1();
 }
 
 
@@ -1237,7 +1237,7 @@ interface Osteocyte extends BoneMatrixSecretingCell {
 	public static String def = "\"A mature osteoblast that has become embedded in the bone matrix. They occupy a small cavity, called lacuna, in the matrix and are connected to adjacent osteocytes via protoplasmic projections called canaliculi.\" [MESH:A.11.329.629.500]";
 
 	@Relates("develops_from")
-	public Osteoblast Osteocyte_develops_from();
+	public Osteoblast[] Osteocyte_develops_from();
 }
 
 
@@ -1248,7 +1248,7 @@ interface Chondrocyte extends GAGSecretingCell, CollagenSecretingCell {
 	public static String def = "\"Polymorphic cell that form cartilage.\" [MESH:A.11.329.171]";
 
 	@Relates("develops_from")
-	public Chondroblast Chondrocyte_develops_from();
+	public Chondroblast[] Chondrocyte_develops_from();
 }
 
 
@@ -1259,7 +1259,7 @@ interface Amelocyte extends EnamelSecretingCell, SimpleColumnarEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public Ameloblast Amelocyte_develops_from();
+	public Ameloblast[] Amelocyte_develops_from();
 }
 
 
@@ -1270,10 +1270,10 @@ interface Odontocyte extends DentineSecretingCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public Odontoblast Odontocyte_develops_from();
+	public Odontoblast[] Odontocyte_develops_from();
 
 	@Relates("develops_from")
-	public MesenchymalCell Odontocyte_develops_from_1();
+	public MesenchymalCell[] Odontocyte_develops_from_1();
 }
 
 
@@ -1284,7 +1284,7 @@ interface Cementocyte extends Osteocyte {
 	public static String def = "\"An osteocytelike cell with numerous processes, trapped in a lacuna in the cement of the tooth.\" [ISBN:0781733901 \"Stedman's Medical Dictionary\"]";
 
 	@Relates("develops_from")
-	public Cementoblast Cementocyte_develops_from();
+	public Cementoblast[] Cementocyte_develops_from();
 }
 
 
@@ -1343,7 +1343,7 @@ interface Melanocyte extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public Melanoblast Melanocyte_develops_from();
+	public Melanoblast[] Melanocyte_develops_from();
 }
 
 
@@ -1482,7 +1482,7 @@ interface ChromaffinCell extends NeuroendocrineCell {
 	public static String def = "\"A cell that stores epinephrine secretory vesicles. During times of stress, the nervous system signals the vesicles to secrete their hormonal content. Their name derives from their ability to stain a brownish color with chromic salts. Characteristically, they are located in the adrenal medulla and paraganglia of the sympathetic nervous system.\" [MESH:A.06.224.161]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell ChromaffinCell_develops_from();
+	public NeuralCrestCell[] ChromaffinCell_develops_from();
 }
 
 
@@ -1613,10 +1613,10 @@ interface Hepatocyte extends EpithelialCell, MetabolisingCell, EndopolyploidCell
 	public static String def = "\"The main structural component of the liver. They are specialized epithelial cells that are organized into interconnected plates called lobules.\" [MESH:A.11.436.348]";
 
 	@Relates("develops_from")
-	public MesenchymalCell Hepatocyte_develops_from();
+	public MesenchymalCell[] Hepatocyte_develops_from();
 
 	@Relates("develops_from")
-	public EndodermalCell Hepatocyte_develops_from_1();
+	public EndodermalCell[] Hepatocyte_develops_from_1();
 }
 
 
@@ -1643,7 +1643,7 @@ interface MyoepithelialCell extends ColumnarCuboidalEpithelialCell, ContractileC
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell MyoepithelialCell_develops_from();
+	public MesodermalCell[] MyoepithelialCell_develops_from();
 }
 
 
@@ -1662,7 +1662,7 @@ interface MuscleCell extends ContractileCell, ElectricallyResponsiveCell {
 	public static String def = "\"A mature contractile cell, commonly known as a myocyte, that forms one of three kinds of muscle.\" [MESH:A.11.620]";
 
 	@Relates("develops_from")
-	public Myoblast MuscleCell_develops_from();
+	public Myoblast[] MuscleCell_develops_from();
 }
 
 
@@ -1673,7 +1673,7 @@ interface SkeletalMuscleCell extends MuscleCell, MultinucleateCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public SkeletalMuscleMyoblast SkeletalMuscleCell_develops_from();
+	public SkeletalMuscleMyoblast[] SkeletalMuscleCell_develops_from();
 }
 
 
@@ -1684,7 +1684,7 @@ interface SlowMuscleCell extends SkeletalMuscleCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public SlowMuscleMyoblast SlowMuscleCell_develops_from();
+	public SlowMuscleMyoblast[] SlowMuscleCell_develops_from();
 }
 
 
@@ -1695,7 +1695,7 @@ interface FastMuscleCell extends SkeletalMuscleCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public FastMuscleMyoblast FastMuscleCell_develops_from();
+	public FastMuscleMyoblast[] FastMuscleCell_develops_from();
 }
 
 
@@ -1714,7 +1714,7 @@ interface CardiacMuscleCellSensuArthopoda extends MultinucleateCell, CardiacMusc
 	public static String def = "\"A striated muscle cell found in the heart. They develop from cardiac myoblasts.\" [MESH:A.11.620.500]";
 
 	@Relates("develops_from")
-	public CardioblastSensuArthropoda CardiacMuscleCellSensuArthopoda_develops_from();
+	public CardioblastSensuArthropoda[] CardiacMuscleCellSensuArthopoda_develops_from();
 }
 
 
@@ -1869,7 +1869,7 @@ interface SynovialCell extends GAGSecretingCell, LiningCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell SynovialCell_develops_from();
+	public MesenchymalCell[] SynovialCell_develops_from();
 }
 
 
@@ -1992,7 +1992,7 @@ interface Erythrocyte extends BloodCell, OxygenAccumulatingCell, ErythroidLineag
 	public static String def = "\"A red blood cell. In mammals, mature erythrocytes are non-nucleated, biconcave disks containing hemoglobin whose function is to transport oxygen.\" [MESH:A.11.118.290]";
 
 	@Relates("develops_from")
-	public Reticulocyte Erythrocyte_develops_from();
+	public Reticulocyte[] Erythrocyte_develops_from();
 }
 
 
@@ -2003,7 +2003,7 @@ interface Platelet extends BloodCell, AnucleateCell, MyeloidCell {
 	public static String def = "\"A non-nucleated disk-shaped cell formed by extrusion from megakaryocytes, found in the blood of all mammals, and mainly involved in blood coagulation.\" [GOC:add, MESH:A.11.118.188]";
 
 	@Relates("develops_from")
-	public Megakaryocyte Platelet_develops_from();
+	public Megakaryocyte[] Platelet_develops_from();
 }
 
 
@@ -2022,7 +2022,7 @@ interface Macrophage extends MyeloidLeukocyte {
 	public static String def = "\"A mononuclear phagocyte present in variety of tissues, typically differentiated from monocytes, capable of phagocytosing a variety of extracellular particulate material, including immune complexes, microorganisms, and dead cells.\" [GO_REF:0000031, GOC:add, http://www.clt.astate.edu/wwilliam/]";
 
 	@Relates("develops_from")
-	public Monocyte Macrophage_develops_from();
+	public Monocyte[] Macrophage_develops_from();
 }
 
 
@@ -2033,7 +2033,7 @@ interface BCell extends LymphocyteOfBLineage {
 	public static String def = "\"A lymphocyte of B lineage with the phenotype CD19-positive and surface immunoglobulin-positive.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ProBCell BCell_develops_from();
+	public ProBCell[] BCell_develops_from();
 }
 
 
@@ -2044,7 +2044,7 @@ interface KeratinizingBarrierEpithelialCell extends StratifiedSquamousEpithelial
 	public static String def = "";
 
 	@Relates("develops_from")
-	public SurfaceEctodermalCell KeratinizingBarrierEpithelialCell_develops_from();
+	public SurfaceEctodermalCell[] KeratinizingBarrierEpithelialCell_develops_from();
 }
 
 
@@ -2095,7 +2095,7 @@ interface GlialCellSensuVertebrata extends GlialCell {
 	public static String def = "\"A non-neuronal cell of the nervous system. They not only provide physical support, but also respond to injury, regulate the ionic and chemical composition of the extracellular milieu. Form the myelin insulation of nervous pathways, guide neuronal migration during development, and exchange metabolites with neurons. Neuroglia have high-affinity transmitter uptake systems, voltage-dependent and transmitter-gated ion channels, and can release transmitters, but their role in signaling (as in many other functions) is unclear.\" [MESH:A.08.637]";
 
 	@Relates("develops_from")
-	public GlioblastSensuVertebrata GlialCellSensuVertebrata_develops_from();
+	public GlioblastSensuVertebrata[] GlialCellSensuVertebrata_develops_from();
 }
 
 
@@ -2154,7 +2154,7 @@ interface Megaspore extends FemaleGermCell {
 	public static String def = "\"A haploid (1n) spore developing into a female gametophyte in heterosporous plants.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public Megasporocyte Megaspore_develops_from();
+	public Megasporocyte[] Megaspore_develops_from();
 }
 
 
@@ -2173,7 +2173,7 @@ interface Microspore extends MaleGermCell {
 	public static String def = "\"A haploid (1n) spore developing into a male gametophyte in heterosporous plants; the uninucleate pollen grain in seed plants.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public Microsporocyte Microspore_develops_from();
+	public Microsporocyte[] Microspore_develops_from();
 }
 
 
@@ -2256,7 +2256,7 @@ interface GuardMotherCell extends EpidermalCell, PlantCell {
 	public static String def = "\"An epidermal cell that divides to produce the guard cells.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public EpidermalInitial GuardMotherCell_develops_from();
+	public EpidermalInitial[] GuardMotherCell_develops_from();
 }
 
 
@@ -2411,7 +2411,7 @@ interface Trichome extends EpidermalCell {
 	public static String def = "\"An outgrowth from the epidermis. Trichomes vary in size and complexity and include hairs, scales, and other structures and may be glandular. In Arabidopsis, patterning of trichome development is not random but does not appear to be lineage-based like stomata.\" [ISBN:0471245208, PMID:10938806]";
 
 	@Relates("develops_from")
-	public EpidermalInitial Trichome_develops_from();
+	public EpidermalInitial[] Trichome_develops_from();
 }
 
 
@@ -2494,7 +2494,7 @@ interface GuardCell extends EpidermalCell, PlantCell {
 	public static String def = "\"One of a pair of cells flanking the stomatal pore and causing the opening and closing of the pore by changes in turgor.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public GuardMotherCell GuardCell_develops_from();
+	public GuardMotherCell[] GuardCell_develops_from();
 }
 
 
@@ -2537,7 +2537,7 @@ interface SocketCell extends EpidermalCell, SupportiveCell {
 	public static String def = "\"A cell that surrounds a trichome and provides support for the trichome.\" [PMID:10938806]";
 
 	@Relates("develops_from")
-	public EpidermalInitial SocketCell_develops_from();
+	public EpidermalInitial[] SocketCell_develops_from();
 }
 
 
@@ -2588,7 +2588,7 @@ interface TrachealEpithelialCell extends EpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public Tracheoblast TrachealEpithelialCell_develops_from();
+	public Tracheoblast[] TrachealEpithelialCell_develops_from();
 }
 
 
@@ -2727,7 +2727,7 @@ interface MetanephricMesenchymeStemCell extends MultiFateStemCell, AnimalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell MetanephricMesenchymeStemCell_develops_from();
+	public MesodermalCell[] MetanephricMesenchymeStemCell_develops_from();
 }
 
 
@@ -2802,7 +2802,7 @@ interface NeuralCrestCell extends MotileCell {
 	public static String def = "\"A cell of the strip of specialized ectoderm flanking each side of the embryonal neural plate, which after the closure of the neural tube, forms a column of isolated cells along the dorsal aspect of the neural tube. Most of the cranial and all of the spinal sensory ganglion cells arise by differentiation of neural crest cells.\" [MESH:A.16.254.600]";
 
 	@Relates("develops_from")
-	public NeurectodermalCell NeuralCrestCell_develops_from();
+	public NeurectodermalCell[] NeuralCrestCell_develops_from();
 }
 
 
@@ -2821,7 +2821,7 @@ interface MesenchymeCondensationCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell MesenchymeCondensationCell_develops_from();
+	public MesenchymalCell[] MesenchymeCondensationCell_develops_from();
 }
 
 
@@ -2832,7 +2832,7 @@ interface AdrenalMedullaCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public TrunkNeuralCrestCell AdrenalMedullaCell_develops_from();
+	public TrunkNeuralCrestCell[] AdrenalMedullaCell_develops_from();
 }
 
 
@@ -2907,7 +2907,7 @@ interface DentalPapillaCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell DentalPapillaCell_develops_from();
+	public CranialNeuralCrestCell[] DentalPapillaCell_develops_from();
 }
 
 
@@ -2918,7 +2918,7 @@ interface HairPapillaCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuralCrestCell HairPapillaCell_develops_from();
+	public NeuralCrestCell[] HairPapillaCell_develops_from();
 }
 
 
@@ -2929,7 +2929,7 @@ interface ScleralCell extends StructuralCell {
 	public static String def = "\"A cell of the sclera of the eye.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell ScleralCell_develops_from();
+	public CranialNeuralCrestCell[] ScleralCell_develops_from();
 }
 
 
@@ -2940,7 +2940,7 @@ interface ChoroidalCellOfTheEye extends StructuralCell {
 	public static String def = "\"A cell of the choroid of the eye.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public CranialNeuralCrestCell ChoroidalCellOfTheEye_develops_from();
+	public CranialNeuralCrestCell[] ChoroidalCellOfTheEye_develops_from();
 }
 
 
@@ -3063,7 +3063,7 @@ interface AxialCell extends StructuralCell {
 	public static String def = "\"A secondary vascular cell that develops from the fusiform cambial initials and oriented with their longest diameter parallel with the main axis of stem or root. These cells make up the axial system, also known as vertical or longitudinal system.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public FusiformInitial AxialCell_develops_from();
+	public FusiformInitial[] AxialCell_develops_from();
 }
 
 
@@ -3074,7 +3074,7 @@ interface RayCell extends StructuralCell {
 	public static String def = "\"A cell that develops from the ray initial and composes all rays (panels of tissue variable in height and width, formed by the ray initials in the vascular cambium and extending radially in the secondary xylem and secondary phloem) in the secondary vascular tissues.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public RayInitial RayCell_develops_from();
+	public RayInitial[] RayCell_develops_from();
 }
 
 
@@ -3093,7 +3093,7 @@ interface SpermCellSensuViridiplantae extends MaleGamete {
 	public static String def = "\"Male gamete, part of male germ unit.\" [ISBN:0471245208]";
 
 	@Relates("develops_from")
-	public GenerativeCell SpermCellSensuViridiplantae_develops_from();
+	public GenerativeCell[] SpermCellSensuViridiplantae_develops_from();
 }
 
 
@@ -3168,7 +3168,7 @@ interface OsteoprogenitorCell extends SingleFateStemCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymeCondensationCell OsteoprogenitorCell_develops_from();
+	public MesenchymeCondensationCell[] OsteoprogenitorCell_develops_from();
 }
 
 
@@ -3235,7 +3235,7 @@ interface NephrogenicMesenchymeStemCell extends MultiFateStemCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell NephrogenicMesenchymeStemCell_develops_from();
+	public MesenchymalCell[] NephrogenicMesenchymeStemCell_develops_from();
 }
 
 
@@ -3270,7 +3270,7 @@ interface HemocyteSensuNematodaAndProtostomia extends PhagocyteSensuNematodaAndP
 	public static String def = "";
 
 	@Relates("develops_from")
-	public ProhemocyteSensuNematodaAndProtostomia HemocyteSensuNematodaAndProtostomia_develops_from();
+	public ProhemocyteSensuNematodaAndProtostomia[] HemocyteSensuNematodaAndProtostomia_develops_from();
 }
 
 
@@ -3305,7 +3305,7 @@ interface PodocyteSensuDiptera {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public ProcrystalCell PodocyteSensuDiptera_develops_from();
+	public ProcrystalCell[] PodocyteSensuDiptera_develops_from();
 }
 
 
@@ -3372,7 +3372,7 @@ interface PhloemElement extends TransportingCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public PhloemInitial PhloemElement_develops_from();
+	public PhloemInitial[] PhloemElement_develops_from();
 }
 
 
@@ -3383,7 +3383,7 @@ interface PavementCell extends EpidermalCell {
 	public static String def = "\"An epidermal cell with a characteristic convoluted anticlinal cell wall that gives a jigsaw like appearance to the lamina.\" [ISBN:087694289]";
 
 	@Relates("develops_from")
-	public EpidermalInitial PavementCell_develops_from();
+	public EpidermalInitial[] PavementCell_develops_from();
 }
 
 
@@ -3618,7 +3618,7 @@ interface Xanthophore extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. Contains cartenoid pigments in structures called pterinosomes or xanthosomes. This gives an appearance ranging from a golden yellow to orange and red.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public Xanthoblast Xanthophore_develops_from();
+	public Xanthoblast[] Xanthophore_develops_from();
 }
 
 
@@ -3629,7 +3629,7 @@ interface Iridophore extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. The cell contains flat light-reflecting platelets, probably of guanine, in stacks called reflecting platets or iridisomes. The color-generating components produce a silver, gold, or iridescent color.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public Iridoblast Iridophore_develops_from();
+	public Iridoblast[] Iridophore_develops_from();
 }
 
 
@@ -3768,7 +3768,7 @@ interface WhiteFatCell extends FatCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public FibroblastNeuralCrestDerived WhiteFatCell_develops_from();
+	public FibroblastNeuralCrestDerived[] WhiteFatCell_develops_from();
 }
 
 
@@ -3891,7 +3891,7 @@ interface EpidermalCellSensuInsecta extends ColumnarCuboidalEpithelialCell {
 	public static String def = "\"A columnar/cuboidal epithelial cell which secretes cuticle from its apical side.\" [FlyBase:ds]";
 
 	@Relates("develops_from")
-	public Epidermoblast EpidermalCellSensuInsecta_develops_from();
+	public Epidermoblast[] EpidermalCellSensuInsecta_develops_from();
 }
 
 
@@ -3902,7 +3902,7 @@ interface Epidermoblast extends NonTerminallyDifferentiatedCell, AnimalCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public SurfaceEctodermalCell Epidermoblast_develops_from();
+	public SurfaceEctodermalCell[] Epidermoblast_develops_from();
 }
 
 
@@ -3993,7 +3993,7 @@ interface FollicleCell extends ColumnarCuboidalEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public FollicleStemCell FollicleCell_develops_from();
+	public FollicleStemCell[] FollicleCell_develops_from();
 }
 
 
@@ -4108,7 +4108,7 @@ interface CD4PositiveHelperTCell extends CD4PositiveAlphaBetaTCell, HelperTCell 
 	public static String def = "\"A CD4-positive, alpha-beta T cell that cooperates with other lymphocytes via direct contact or cytokine release to initiate a variety of immune functions.\" [GO_REF:0000031, GOC:add, GOC:pam, ISBN:0781735149, MESH:A.11.118.637.555.567.569.200.400]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell CD4PositiveHelperTCell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] CD4PositiveHelperTCell_develops_from();
 }
 
 
@@ -4159,7 +4159,7 @@ interface StromalCell {
 	public static String def = "\"A connective tissue cell of an organ found in the loose connective tissue. These are most often associated with the uterine mucosa and the ovary as well as the hematopoietic system and elsewhere.\" [MESH:A.11.329.830]";
 
 	@Relates("develops_from")
-	public MesenchymalCell StromalCell_develops_from();
+	public MesenchymalCell[] StromalCell_develops_from();
 }
 
 
@@ -4298,7 +4298,7 @@ interface PerineuronalSatelliteCell extends NeuronAssociatedCellSensuVertebrata,
 	public static String def = "\"A non-neuronal cell that surrounds the neuronal cell bodies of the ganglia.\" [MESH:A.08.340.685]";
 
 	@Relates("develops_from")
-	public GlioblastSensuVertebrata PerineuronalSatelliteCell_develops_from();
+	public GlioblastSensuVertebrata[] PerineuronalSatelliteCell_develops_from();
 }
 
 
@@ -4309,7 +4309,7 @@ interface MacrophageDerivedFoamCell extends FoamCell {
 	public static String def = "\"A type of foam cell derived from a macrophage containing lipids in small vacuoles and typically seen in atherolosclerotic lesions, as well as other conditions.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public Macrophage MacrophageDerivedFoamCell_develops_from();
+	public Macrophage[] MacrophageDerivedFoamCell_develops_from();
 }
 
 
@@ -4408,7 +4408,7 @@ interface PigmentedEpithelialCell extends ColumnarCuboidalEpithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuroepithelialCell PigmentedEpithelialCell_develops_from();
+	public NeuroepithelialCell[] PigmentedEpithelialCell_develops_from();
 }
 
 
@@ -4491,7 +4491,7 @@ interface Neuron extends ElectricallyResponsiveCell, ElectricallySignalingCell {
 	public static String def = "\"The basic cellular unit of nervous tissue. Each neuron consists of a body, an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system.\" [MESH:A.08.663]";
 
 	@Relates("develops_from")
-	public Neuroblast Neuron_develops_from();
+	public Neuroblast[] Neuron_develops_from();
 }
 
 
@@ -4502,7 +4502,7 @@ interface Melanoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A cell that originates from the neural crest and differentiates into a pigment cell.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Melanoblast_develops_from();
+	public NeuralCrestCell[] Melanoblast_develops_from();
 }
 
 
@@ -4513,7 +4513,7 @@ interface Lymphocyte extends Leukocyte {
 	public static String def = "\"A cell of the B cell, T cell, or natural killer cell lineage.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public CommonLymphoidProgenitor Lymphocyte_develops_from();
+	public CommonLymphoidProgenitor[] Lymphocyte_develops_from();
 }
 
 
@@ -4540,7 +4540,7 @@ interface THelper1Cell extends CD4PositiveHelperTCell {
 	public static String def = "\"A CD4-positive, alpha-beta T cell that has the phenotype T-bet-positive and produces interferon-gamma.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell THelper1Cell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] THelper1Cell_develops_from();
 }
 
 
@@ -4551,7 +4551,7 @@ interface THelper2Cell extends CD4PositiveHelperTCell {
 	public static String def = "\"A CD4-positive, alpha-beta T cell that has the phenotype GATA-3-positive and produces interleukin-4.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell THelper2Cell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] THelper2Cell_develops_from();
 }
 
 
@@ -4562,7 +4562,7 @@ interface Proerythroblast extends ErythroidLineageCell {
 	public static String def = "\"An immature, nucleated erythrocyte occupying the stage of erythropoeisis that follows formation of erythroid progenitor cells.\" [ISBN:0721601464, MESH:A.11.118.290.350.200]";
 
 	@Relates("develops_from")
-	public ErythroidProgenitorCell Proerythroblast_develops_from();
+	public ErythroidProgenitorCell[] Proerythroblast_develops_from();
 }
 
 
@@ -4581,7 +4581,7 @@ interface BasophilicErythroblast extends Erythroblast {
 	public static String def = "\"A nucleated immature erythrocyte, having cytoplasm generally similar to that of the earlier proerythroblast but sometimes even more basophilic, and usually regular in outline. The nucleus is still relatively large, but the chromatin strands are thicker and more deeply staining, giving a coarser appearance; the nucleoli have disappeared.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public Proerythroblast BasophilicErythroblast_develops_from();
+	public Proerythroblast[] BasophilicErythroblast_develops_from();
 }
 
 
@@ -4592,7 +4592,7 @@ interface PolychromatophilicErythroblast extends Erythroblast {
 	public static String def = "\"A nucleated, immature erythrocyte in which the nucleus occupies a relatively smaller part of the cell than in its precursor, the basophilic erythroblast. The cytoplasm is beginning to acquire hemoglobin and thus is no longer a purely blue color, but takes on an acidophilic tint, which becomes progressively more marked as the cell matures. The chromatin of the nucleus is arranged in coarse, deeply staining clumps.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicErythroblast PolychromatophilicErythroblast_develops_from();
+	public BasophilicErythroblast[] PolychromatophilicErythroblast_develops_from();
 }
 
 
@@ -4611,7 +4611,7 @@ interface OrthochromaticErythroblast extends Erythroblast {
 	public static String def = "\"The final stage of the nucleated, immature erythrocyte, before nuclear loss. Typically the cytoplasm is described as acidophilic, but it still shows a faint polychromatic tint. The nucleus is small and initially may still have coarse, clumped chromatin, as in its precursor, the polychromatophilic erythroblast, but ultimately it becomes pyknotic, and appears as a deeply staining, blue-black, homogeneous structureless mass. The nucleus is often eccentric and sometimes lobulated.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public PolychromatophilicErythroblast OrthochromaticErythroblast_develops_from();
+	public PolychromatophilicErythroblast[] OrthochromaticErythroblast_develops_from();
 }
 
 
@@ -4622,7 +4622,7 @@ interface MegakaryocyteProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"The earliest cytologically identifiable precursor in the thrombocytic series.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public MegakaryocyteErythroidProgenitorCell MegakaryocyteProgenitorCell_develops_from();
+	public MegakaryocyteErythroidProgenitorCell[] MegakaryocyteProgenitorCell_develops_from();
 }
 
 
@@ -4649,7 +4649,7 @@ interface Megakaryocyte extends MyeloidCell {
 	public static String def = "\"A giant cell 50 to 100 micron in diameter, with a greatly lobulated nucleus, found in the bone marrow; mature blood platelets are released from its cytoplasm.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public MegakaryocyteProgenitorCell Megakaryocyte_develops_from();
+	public MegakaryocyteProgenitorCell[] Megakaryocyte_develops_from();
 }
 
 
@@ -4660,7 +4660,7 @@ interface GranulocyteMonocyteProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell that has plasma membrane part CD123, CD34, and CD45RA, lacks plasma membrane part CD19 and CD3, and is committed to the granulocyte and monocyte lineages.\" [GO_REF:0000031, GOC:add, GOC:amm, http://www.copewithcytokines.de, ISBN:0721601464, PMID:15684376, PMID:15867096, PMID:16551251]";
 
 	@Relates("develops_from")
-	public CD71PositiveCommonMyeloidProgenitor GranulocyteMonocyteProgenitorCell_develops_from();
+	public CD71PositiveCommonMyeloidProgenitor[] GranulocyteMonocyteProgenitorCell_develops_from();
 }
 
 
@@ -4671,7 +4671,7 @@ interface Reticulocyte extends BloodCell, ErythroidLineageCell {
 	public static String def = "\"An immature erythrocyte showing a basophilic reticulum under vital staining.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public OrthochromaticErythroblast Reticulocyte_develops_from();
+	public OrthochromaticErythroblast[] Reticulocyte_develops_from();
 }
 
 
@@ -4682,7 +4682,7 @@ interface Promonocyte extends MyeloidProgenitorCell {
 	public static String def = "\"A precursor in the monocytic series, being a cell intermediate in development between the monoblast and monocyte.\" [http://www.clt.astate.edu/wwilliam/, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public Monoblast Promonocyte_develops_from();
+	public Monoblast[] Promonocyte_develops_from();
 }
 
 
@@ -4693,7 +4693,7 @@ interface BandFormNeutrophil extends ImmatureNeutrophil {
 	public static String def = "\"A late neutrophilic metamyelocyte in which the nucleus is in the form of a curved or coiled band, not having acquired the typical multilobar shape of the mature neutrophil.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilicMetamyelocyte BandFormNeutrophil_develops_from();
+	public NeutrophilicMetamyelocyte[] BandFormNeutrophil_develops_from();
 }
 
 
@@ -4728,7 +4728,7 @@ interface NeutrophilicPromyelocyte extends Promyelocyte {
 	public static String def = "\"A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a myeloblast and myelocyte, and containing a few, as yet undifferentiated, cytoplasmic granules.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilicMyeloblast NeutrophilicPromyelocyte_develops_from();
+	public NeutrophilicMyeloblast[] NeutrophilicPromyelocyte_develops_from();
 }
 
 
@@ -4747,7 +4747,7 @@ interface AngioblasticMesenchymalCell extends MultiFateStemCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell AngioblasticMesenchymalCell_develops_from();
+	public MesenchymalCell[] AngioblasticMesenchymalCell_develops_from();
 }
 
 
@@ -4774,7 +4774,7 @@ interface CardiacMesenchymalCell extends MesenchymalCell {
 	public static String def = "\"A mesenchymal cell found in the developing heart.\" [PMID:18816864]";
 
 	@Relates("develops_from")
-	public TrunkNeuralCrestCell CardiacMesenchymalCell_develops_from();
+	public TrunkNeuralCrestCell[] CardiacMesenchymalCell_develops_from();
 }
 
 
@@ -4785,7 +4785,7 @@ interface ParafollicularCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuralCrestCell ParafollicularCell_develops_from();
+	public NeuralCrestCell[] ParafollicularCell_develops_from();
 }
 
 
@@ -4796,7 +4796,7 @@ interface Leucophore extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. Contains uric acid or other purine crystals deposited in stacks called leucosomes. The crystals reflect light and this gives a white appearance under white light.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public Leucoblast Leucophore_develops_from();
+	public Leucoblast[] Leucophore_develops_from();
 }
 
 
@@ -4815,7 +4815,7 @@ interface Erythrophore extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. Contains pteridine and/or carotenoid pigments in structures called pterinosomes or erythrosomes. This gives an orange to red appearance.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public PigmentErythroblast Erythrophore_develops_from();
+	public PigmentErythroblast[] Erythrophore_develops_from();
 }
 
 
@@ -4834,7 +4834,7 @@ interface Monocyte extends MyeloidLeukocyte {
 	public static String def = "\"Myeloid mononuclear recirculating leukocyte that can act as a precursor of tissue macrophages, osteoclasts and some populations of tissue dendritic cells.\" [GO_REF:0000031, http://www.clt.astate.edu/wwilliam/, MESH:A.11.118.637.555.652]";
 
 	@Relates("develops_from")
-	public Promonocyte Monocyte_develops_from();
+	public Promonocyte[] Monocyte_develops_from();
 }
 
 
@@ -4869,7 +4869,7 @@ interface NeutrophilicMyelocyte extends ImmatureNeutrophil {
 	public static String def = "\"A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a promyelocyte and a metamyelocyte; in this stage, differentiation of cytoplasmic granules has begun.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilicPromyelocyte NeutrophilicMyelocyte_develops_from();
+	public NeutrophilicPromyelocyte[] NeutrophilicMyelocyte_develops_from();
 }
 
 
@@ -4888,7 +4888,7 @@ interface NeutrophilicMetamyelocyte extends ImmatureNeutrophil {
 	public static String def = "\"A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a meylocyte and the band form neutrophil. The protein synthesis seen in earlier stages decreases or stops; the nucleus becomes indented and its chromatin becomes coarse and clumped; and the cytoplasm becomes pink like that of a mature granulocyte.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilicMyelocyte NeutrophilicMetamyelocyte_develops_from();
+	public NeutrophilicMyelocyte[] NeutrophilicMetamyelocyte_develops_from();
 }
 
 
@@ -4947,7 +4947,7 @@ interface SmallLutealCell extends LutealCell, ProgesteroneSecretingCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public ThecaCell SmallLutealCell_develops_from();
+	public ThecaCell[] SmallLutealCell_develops_from();
 }
 
 
@@ -4966,7 +4966,7 @@ interface LargeLutealCell extends LutealCell, TestosteroneSecretingCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public GranulosaCell LargeLutealCell_develops_from();
+	public GranulosaCell[] LargeLutealCell_develops_from();
 }
 
 
@@ -5121,7 +5121,7 @@ interface EosinophilProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to the eosinophil lineage.\" [http://www.copewithcytokines.de]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell EosinophilProgenitorCell_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] EosinophilProgenitorCell_develops_from();
 }
 
 
@@ -5132,7 +5132,7 @@ interface EosinophilicMyelocyte extends ImmatureEosinophil {
 	public static String def = "\"A eosinophil precursor in the granulocytic series, being a cell intermediate in development between a promyelocyte and a metamyelocyte; in this stage, differentiation of cytoplasmic granules has begun.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilicPromyelocyte EosinophilicMyelocyte_develops_from();
+	public EosinophilicPromyelocyte[] EosinophilicMyelocyte_develops_from();
 }
 
 
@@ -5143,7 +5143,7 @@ interface BasophilProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell committed to the basophil lineage.\" [GOC:add, http://www.copewithcytokines.de]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell BasophilProgenitorCell_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] BasophilProgenitorCell_develops_from();
 }
 
 
@@ -5154,7 +5154,7 @@ interface BasophilicMyelocyte extends ImmatureBasophil {
 	public static String def = "\"A basophil precursor in the granulocytic series, being a cell intermediate in development between a promyelocyte and a metamyelocyte; in this stage, differentiation of cytoplasmic granules has begun.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicPromyelocyte BasophilicMyelocyte_develops_from();
+	public BasophilicPromyelocyte[] BasophilicMyelocyte_develops_from();
 }
 
 
@@ -5229,10 +5229,10 @@ interface NaturalKillerCell extends Lymphocyte {
 	public static String def = "\"A lymphocyte that can spontaneously kill a variety of target cells without prior antigenic activation via germline encoded activation receptors and also regulate immune responses via cytokine release and direct contact with other cells.\" [GOC:add, ISBN:0781735149, PMID:15771571]";
 
 	@Relates("develops_from")
-	public ProNKCell NaturalKillerCell_develops_from();
+	public ProNKCell[] NaturalKillerCell_develops_from();
 
 	@Relates("develops_from")
-	public DN1ThymicProTCell NaturalKillerCell_develops_from_1();
+	public DN1ThymicProTCell[] NaturalKillerCell_develops_from_1();
 }
 
 
@@ -5419,7 +5419,7 @@ interface MultinucleatedGiantCell extends MyeloidLeukocyte {
 	public static String def = "\"A phagocytic cell formed by the fusion of macrophages, occurs in chronic inflammatory responses to persistent microorganism such as M.tuberculosis, component of granulomas.\" [GOC:add, ISBN:0702022918, ISBN:0702024783]";
 
 	@Relates("develops_from")
-	public Macrophage MultinucleatedGiantCell_develops_from();
+	public Macrophage[] MultinucleatedGiantCell_develops_from();
 }
 
 
@@ -5446,7 +5446,7 @@ interface MesangialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesenchymalCell MesangialCell_develops_from();
+	public MesenchymalCell[] MesangialCell_develops_from();
 }
 
 
@@ -5689,7 +5689,7 @@ interface MusclePrecursorCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public MesodermalCell MusclePrecursorCell_develops_from();
+	public MesodermalCell[] MusclePrecursorCell_develops_from();
 }
 
 
@@ -5700,7 +5700,7 @@ interface RadialGlialCell extends NeuroblastSensuVertebrata {
 	public static String def = "\"A transient cell present only in the developing CNS. Functions as both a precursor cell and as a scaffold to support neuronal migration.\" [GOC:dph]";
 
 	@Relates("develops_from")
-	public NeuroepithelialCell RadialGlialCell_develops_from();
+	public NeuroepithelialCell[] RadialGlialCell_develops_from();
 }
 
 
@@ -5743,7 +5743,7 @@ interface CerebrospinalFluidSecretingCell extends ColumnarCuboidalEpithelialCell
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeuralCrestCell CerebrospinalFluidSecretingCell_develops_from();
+	public NeuralCrestCell[] CerebrospinalFluidSecretingCell_develops_from();
 }
 
 
@@ -5794,7 +5794,7 @@ interface TerminalSchwannCell extends SupportiveCell {
 	public static String def = "\"A neuroglial cell of the peripheral nervous system inside the basal lamina of the neuromuscular junction providing chemical and physical support to the synapse.\" [JB:jb]";
 
 	@Relates("develops_from")
-	public GlialCell TerminalSchwannCell_develops_from();
+	public GlialCell[] TerminalSchwannCell_develops_from();
 }
 
 
@@ -5933,7 +5933,7 @@ interface NeuroepithelialCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public NeurectodermalCell NeuroepithelialCell_develops_from();
+	public NeurectodermalCell[] NeuroepithelialCell_develops_from();
 }
 
 
@@ -5944,7 +5944,7 @@ interface CumulusCell extends ProteinSecretingCell {
 	public static String def = "";
 
 	@Relates("develops_from")
-	public GranulosaCell CumulusCell_develops_from();
+	public GranulosaCell[] CumulusCell_develops_from();
 }
 
 
@@ -6155,7 +6155,7 @@ interface Leukocyte extends HematopoieticCell {
 	public static String def = "\"A nucleated cell of the myeloid or lymphoid lineages, found in blood or other tissue.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public HematopoieticStemCell Leukocyte_develops_from();
+	public HematopoieticStemCell[] Leukocyte_develops_from();
 }
 
 
@@ -6222,7 +6222,7 @@ interface Cyanophore extends PigmentCell {
 	public static String def = "\"A pigment cell derived from the neural crest. Contains blue pigment of unknown chemical composition in fibrous organelles termed cyanosomes. This gives a blue appearance.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public Cyanoblast Cyanophore_develops_from();
+	public Cyanoblast[] Cyanophore_develops_from();
 }
 
 
@@ -6345,7 +6345,7 @@ interface Thrombocyte extends BloodCell, MyeloidCell {
 	public static String def = "\"A nucleated blood cell involved in coagulation, typically seen in birds and other non-mammalian vertebrates.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public Thromboblast Thrombocyte_develops_from();
+	public Thromboblast[] Thrombocyte_develops_from();
 }
 
 
@@ -6396,7 +6396,7 @@ interface ImmatureBasophil extends Basophil {
 	public static String def = "\"Any of the immature forms of a basophil, in which basophilic specific granules are present but other phenotypic features of the mature form may be lacking. A basophil is granular leukocyte that in its mature form has an irregularly shaped, pale-staining nucleus that is partially constricted into two lobes, and with cytoplasm that contains coarse, bluish-black granules of variable size. Basophils contain vasoactive amines such as histamine and serotonin, which are released on appropriate stimulation.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicPromyelocyte ImmatureBasophil_develops_from();
+	public BasophilicPromyelocyte[] ImmatureBasophil_develops_from();
 }
 
 
@@ -6407,7 +6407,7 @@ interface BasophilicMetamyelocyte extends ImmatureBasophil {
 	public static String def = "\"A basophil precursor in the granulocytic series, being a cell intermediate in development between a basophilic myelocyte and a band form basophil.\" [ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicMyelocyte BasophilicMetamyelocyte_develops_from();
+	public BasophilicMyelocyte[] BasophilicMetamyelocyte_develops_from();
 }
 
 
@@ -6418,7 +6418,7 @@ interface BandFormBasophil extends ImmatureBasophil {
 	public static String def = "\"A late basophilic metamyelocyte in which the nucleus is in the form of a curved or coiled band, not having acquired the typical multilobar shape of the mature basophil.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicMetamyelocyte BandFormBasophil_develops_from();
+	public BasophilicMetamyelocyte[] BandFormBasophil_develops_from();
 }
 
 
@@ -6437,7 +6437,7 @@ interface ImmatureEosinophil extends Eosinophil {
 	public static String def = "\"Any of the immature forms of an eosinophil, in which eosinophilic specific granules are present but other phenotypic features of the mature form may be lacking. An eosinophil is a granulocyte that in its mature form has a nucleus that usually has two lobes connected by one or more slender threads of chromatin, and cytoplasm containing coarse, round granules that are uniform in size and which can be stained by the dye eosin.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilicPromyelocyte ImmatureEosinophil_develops_from();
+	public EosinophilicPromyelocyte[] ImmatureEosinophil_develops_from();
 }
 
 
@@ -6448,7 +6448,7 @@ interface EosinophilicMetamyelocyte extends ImmatureEosinophil {
 	public static String def = "\"A eosinophil precursor in the granulocytic series, being a cell intermediate in development between a eosinophilic myelocyte and a band form eosinophil.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilicMyelocyte EosinophilicMetamyelocyte_develops_from();
+	public EosinophilicMyelocyte[] EosinophilicMetamyelocyte_develops_from();
 }
 
 
@@ -6459,7 +6459,7 @@ interface BandFormEosinophil extends ImmatureEosinophil {
 	public static String def = "\"A late eosinophilic metamyelocyte in which the nucleus is in the form of a curved or coiled band, not having acquired the typical multilobar shape of the mature basophil.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilicMetamyelocyte BandFormEosinophil_develops_from();
+	public EosinophilicMetamyelocyte[] BandFormEosinophil_develops_from();
 }
 
 
@@ -6478,7 +6478,7 @@ interface ImmatureNeutrophil extends Neutrophil {
 	public static String def = "\"Any of the immature forms of a neutrophil in which neutrophilic specific granules are present but other phenotypic features of the mature form may be lacking. A neutrophil is a granular leukocyte that in its mature form has a nucleus with three to five lobes connected by slender threads of chromatin, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public NeutrophilicPromyelocyte ImmatureNeutrophil_develops_from();
+	public NeutrophilicPromyelocyte[] ImmatureNeutrophil_develops_from();
 }
 
 
@@ -6505,7 +6505,7 @@ interface MultinuclearOsteoclast extends Osteoclast {
 	public static String def = "\"A specialized multinuclear osteoclast associated with the absorption and removal of bone.\" [GOC:add, PMID:12713016, PMID:9415452]";
 
 	@Relates("develops_from")
-	public MononuclearOsteoclast MultinuclearOsteoclast_develops_from();
+	public MononuclearOsteoclast[] MultinuclearOsteoclast_develops_from();
 }
 
 
@@ -6516,7 +6516,7 @@ interface MultinuclearOdontoclast extends Odontoclast, MultinuclearOsteoclast {
 	public static String def = "\"A specialized multinuclear osteoclast associated with the absorption and removal of cementum.\" [GOC:add, PMID:9415452]";
 
 	@Relates("develops_from")
-	public MononuclearOdontoclast MultinuclearOdontoclast_develops_from();
+	public MononuclearOdontoclast[] MultinuclearOdontoclast_develops_from();
 }
 
 
@@ -6535,7 +6535,7 @@ interface MyeloidDendriticCell extends ConventionalDendriticCell {
 	public static String def = "\"A dendritic cell of the myeloid lineage.\" [GOC:add, PMID:10449155, PMID:9521319]";
 
 	@Relates("develops_from")
-	public Monocyte MyeloidDendriticCell_develops_from();
+	public Monocyte[] MyeloidDendriticCell_develops_from();
 }
 
 
@@ -6554,7 +6554,7 @@ interface PlasmacytoidDendriticCell extends DendriticCell {
 	public static String def = "\"A dendritic cell type of distinct morphology, localization, and surface marker expression from other dendritic cell types and associated with early stage immune responses, particularly the release of physiologically abundant amounts of type I interferons in response to infection.\" [GOC:add, PMID:15549123, PMID:15596797]";
 
 	@Relates("develops_from")
-	public HematopoieticStemCell PlasmacytoidDendriticCell_develops_from();
+	public HematopoieticStemCell[] PlasmacytoidDendriticCell_develops_from();
 }
 
 
@@ -6565,7 +6565,7 @@ interface MatureBCell extends BCell {
 	public static String def = "\"A B cell that is mature, having left the bone marrow. Initially, these cells are IgM-positive and IgD-positive, and they can be activated by antigen.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ImmatureBCell MatureBCell_develops_from();
+	public ImmatureBCell[] MatureBCell_develops_from();
 }
 
 
@@ -6576,7 +6576,7 @@ interface PlasmaCell extends AntibodySecretingCell {
 	public static String def = "\"A terminally differentiated, post-mitotic, antibody secreting cell of the B cell lineage with the phenotype CD138-positive, surface immunonoglobulin-negative, and MHC Class II-negative. Plasma cells are oval or round with extensive rough endoplasmic reticulum, a well-developed Golgi apparatus, and a round nucleus having a characteristic cartwheel heterochromatin pattern and are devoted to producing large amounts of immunoglobulin.\" [GO_REF:0000031, GOC:add, ISBN:0721601464, ISBN:0781735149 \"Fundamental Immunology, 6th ed. (WE Paul, ed) Wolters Kluwer (Philadelphia), 2003. 781735149\"]";
 
 	@Relates("develops_from")
-	public Plasmablast PlasmaCell_develops_from();
+	public Plasmablast[] PlasmaCell_develops_from();
 }
 
 
@@ -6595,7 +6595,7 @@ interface NaiveBCell extends MatureBCell {
 	public static String def = "\"A naive B cell is a mature B cell that has the phenotype surface IgD-positive, surface IgM-positive, CD27-negative, and CD38-negative, and that has not yet been activated by antigen in the periphery.\" [GO_REF:0000031, GOC:add, GOC:rhs, IBSN:0781765196]";
 
 	@Relates("develops_from")
-	public TransitionalStageBCell NaiveBCell_develops_from();
+	public TransitionalStageBCell[] NaiveBCell_develops_from();
 }
 
 
@@ -6638,7 +6638,7 @@ interface CD4PositiveAlphaBetaIntraepithelialTCell extends CD4PositiveAlphaBetaT
 	public static String def = "\"A CD4-positive, alpha-beta T cell that is found in the columnar epithelium of the gastrointestinal tract. Intraepithelial T cells often have a memory phenotype of CD2-positive, CD5-positive, and CD44-positive.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public CD4PositiveAlphaBetaThymocyte CD4PositiveAlphaBetaIntraepithelialTCell_develops_from();
+	public CD4PositiveAlphaBetaThymocyte[] CD4PositiveAlphaBetaIntraepithelialTCell_develops_from();
 }
 
 
@@ -6649,7 +6649,7 @@ interface CD8PositiveAlphaBetaCytotoxicTCell extends CD8PositiveAlphaBetaTCell, 
 	public static String def = "\"A CD8-positive, alpha-beta T cell that is capable of killing target cells in an antigen specific manner with the phenotype perforin-positive and granzyme B-positive.\" [GO_REF:0000031, GOC:add, GOC:pam, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ActivatedCD8PositiveAlphaBetaTCell CD8PositiveAlphaBetaCytotoxicTCell_develops_from();
+	public ActivatedCD8PositiveAlphaBetaTCell[] CD8PositiveAlphaBetaCytotoxicTCell_develops_from();
 }
 
 
@@ -6692,7 +6692,7 @@ interface ImmatureGammaDeltaTCell extends GammaDeltaTCell {
 	public static String def = "\"A gamma-delta T cell that has an immature phenotype.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DN3Thymocyte ImmatureGammaDeltaTCell_develops_from();
+	public DN3Thymocyte[] ImmatureGammaDeltaTCell_develops_from();
 }
 
 
@@ -6703,7 +6703,7 @@ interface MatureGammaDeltaTCell extends GammaDeltaTCell {
 	public static String def = "\"A gamma-delta T cell that has a mature phenotype. These cells can be found in tissues and circulation where they express unique TCR repertoire depending on their location.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ImmatureGammaDeltaTCell MatureGammaDeltaTCell_develops_from();
+	public ImmatureGammaDeltaTCell[] MatureGammaDeltaTCell_develops_from();
 }
 
 
@@ -6738,7 +6738,7 @@ interface ImmatureSinglePositiveThymocyte extends Thymocyte {
 	public static String def = "\"A thymocyte that has the phenotype CD4-negative, CD8-positive, CD44-negative, CD25-negative, and pre-TCR-positive.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DN4Thymocyte ImmatureSinglePositiveThymocyte_develops_from();
+	public DN4Thymocyte[] ImmatureSinglePositiveThymocyte_develops_from();
 }
 
 
@@ -6749,7 +6749,7 @@ interface DN2Thymocyte extends Thymocyte {
 	public static String def = "\"A thymocyte that has the phenotype CD4-negative, CD8-negative, CD44-positive, and CD25-positive.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DN1ThymicProTCell DN2Thymocyte_develops_from();
+	public DN1ThymicProTCell[] DN2Thymocyte_develops_from();
 }
 
 
@@ -6760,7 +6760,7 @@ interface DN3Thymocyte extends ImmatureAlphaBetaTCell, Thymocyte {
 	public static String def = "\"A thymocyte that has the phenotype CD4-negative, CD8-negative, CD44-positive, and CD25-negative and expressing the T cell receptor beta-chain in complex with the pre-T cell receptor alpha chain.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DN2Thymocyte DN3Thymocyte_develops_from();
+	public DN2Thymocyte[] DN3Thymocyte_develops_from();
 }
 
 
@@ -6771,7 +6771,7 @@ interface DN4Thymocyte extends ImmatureAlphaBetaTCell, Thymocyte {
 	public static String def = "\"A thymocyte that has the phenotype CD4-negative, CD8-negative, CD44-negative, CD25-negative, and pre-TCR-positive.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DN3Thymocyte DN4Thymocyte_develops_from();
+	public DN3Thymocyte[] DN4Thymocyte_develops_from();
 }
 
 
@@ -6782,7 +6782,7 @@ interface DoublePositiveAlphaBetaThymocyte extends ImmatureAlphaBetaTCell {
 	public static String def = "\"A thymocyte expressing the alpha-beta T cell receptor complex as well as both the CD4 and CD8 coreceptors.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ImmatureSinglePositiveThymocyte DoublePositiveAlphaBetaThymocyte_develops_from();
+	public ImmatureSinglePositiveThymocyte[] DoublePositiveAlphaBetaThymocyte_develops_from();
 }
 
 
@@ -6793,7 +6793,7 @@ interface CD4PositiveAlphaBetaThymocyte extends ImmatureAlphaBetaTCell {
 	public static String def = "\"An immature alpha-beta T cell that is located in the thymus and expressing the CD4 coreceptor.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DoublePositiveAlphaBetaThymocyte CD4PositiveAlphaBetaThymocyte_develops_from();
+	public DoublePositiveAlphaBetaThymocyte[] CD4PositiveAlphaBetaThymocyte_develops_from();
 }
 
 
@@ -6804,7 +6804,7 @@ interface CD8PositiveAlphaBetaThymocyte extends ImmatureAlphaBetaTCell {
 	public static String def = "\"An immature alpha-beta T cell that is located in the thymus and expressing the CD8 coreceptor.\" [GO_REF:0000031, GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public DoublePositiveAlphaBetaThymocyte CD8PositiveAlphaBetaThymocyte_develops_from();
+	public DoublePositiveAlphaBetaThymocyte[] CD8PositiveAlphaBetaThymocyte_develops_from();
 }
 
 
@@ -6823,7 +6823,7 @@ interface MatureNKTCell extends MatureAlphaBetaTCell {
 	public static String def = "\"A mature alpha-beta T cell of a distinct lineage that bears natural killer markers and a T cell receptor specific for a limited set of ligands. NK T cells have activation and regulatory roles particularly early in an immune response.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ImmatureNKTCell MatureNKTCell_develops_from();
+	public ImmatureNKTCell[] MatureNKTCell_develops_from();
 }
 
 
@@ -6842,7 +6842,7 @@ interface ImmatureBCell extends PrecursorBCell {
 	public static String def = "\"An immature B cell is a precursor B cell that has the phenotype surface IgM-positive and surface IgD-negative, and have not undergone class immunoglobulin class switching or peripheral encounter with antigen and activation.\" [GO_REF:0000031, GOC:add, GOC:rhs, ISBN:0781735149 \"Fundamental Immunology, 6th ed. (WE Paul, ed) Wolters Kluwer (Philadelphia), 2003.\"]";
 
 	@Relates("develops_from")
-	public ProBCell ImmatureBCell_develops_from();
+	public ProBCell[] ImmatureBCell_develops_from();
 }
 
 
@@ -6901,7 +6901,7 @@ interface ImmatureNaturalKillerCell extends NaturalKillerCell {
 	public static String def = "\"A natural killer cell that is developmentally immature, has the phenotype CD34-negative, CD117-positive, CD122-positive, and CD161-positive, and expresses additional natural killer cell receptors (NKR).\" [GO_REF:0000031, GOC:add, ISBN:0781735149, PMID:12457618]";
 
 	@Relates("develops_from")
-	public PreNaturalKillerCell ImmatureNaturalKillerCell_develops_from();
+	public PreNaturalKillerCell[] ImmatureNaturalKillerCell_develops_from();
 }
 
 
@@ -6912,7 +6912,7 @@ interface MatureNaturalKillerCell extends NaturalKillerCell {
 	public static String def = "\"A natural killer cell that is developmentally mature, has the phenotype CD16-positive, and expresses a variety of inhibitory and activating receptors that recognize NHC class I and other stress related molecules.\" [GO_REF:0000031, GOC:add, ISBN:0781735149, PMID:14685782]";
 
 	@Relates("develops_from")
-	public ImmatureNaturalKillerCell MatureNaturalKillerCell_develops_from();
+	public ImmatureNaturalKillerCell[] MatureNaturalKillerCell_develops_from();
 }
 
 
@@ -6923,7 +6923,7 @@ interface ProNKCell extends LymphoidProgenitorCell {
 	public static String def = "\"A lymphoid progenitor cell that is committed to the natural killer cell lineage, expressing CD122 (IL-15) receptor, but lacking many of the phenotypic characteristics of later stages of natural killer cell development such as expression of NK activating and inhibitory molecules. In human this cell has the phenotype CD34-positive, CD45RA-positive, CD10-positive, CD117-negative, and CD161 negative.\" [GO_REF:0000031, GOC:add, GOC:pam, PMID:11532393, PMID:12457618, PMID:15032583, PMID:15766674]";
 
 	@Relates("develops_from")
-	public CommonLymphoidProgenitor ProNKCell_develops_from();
+	public CommonLymphoidProgenitor[] ProNKCell_develops_from();
 }
 
 
@@ -6934,7 +6934,7 @@ interface ProBCell extends LymphoidProgenitorCell {
 	public static String def = "\"A progenitor cell of the B cell lineage, with some lineage specific activity such as early stages of recombination of B cell receptor genes, but not yet fully committed to the B cell lineage until the expression of PAX5 occurs.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public CommonLymphoidProgenitor ProBCell_develops_from();
+	public CommonLymphoidProgenitor[] ProBCell_develops_from();
 }
 
 
@@ -6945,7 +6945,7 @@ interface ProTCell extends LymphoidProgenitorCell {
 	public static String def = "\"A lymphoid progenitor cell of the T cell lineage, with some lineage specific marker expression, but not yet fully committed to the T cell lineage.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public CommonLymphoidProgenitor ProTCell_develops_from();
+	public CommonLymphoidProgenitor[] ProTCell_develops_from();
 }
 
 
@@ -6956,7 +6956,7 @@ interface Thromboblast extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell of the thrombocyte, a nucleated blood cell involved in coagulation typically seen in birds and other non-mammalian vertebrates.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public MegakaryocyteErythroidProgenitorCell Thromboblast_develops_from();
+	public MegakaryocyteErythroidProgenitorCell[] Thromboblast_develops_from();
 }
 
 
@@ -6967,7 +6967,7 @@ interface BasophilicMyeloblast extends Myeloblast {
 	public static String def = "\"A myeloblast committed to the basophil lineage. A myeloblast is the most primitive precursor in the granulocytic series, having fine, evenly distributed chromatin, several nucleoli, and a nongranular basophilic cytoplasm.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilProgenitorCell BasophilicMyeloblast_develops_from();
+	public BasophilProgenitorCell[] BasophilicMyeloblast_develops_from();
 }
 
 
@@ -6978,7 +6978,7 @@ interface BasophilicPromyelocyte extends Promyelocyte {
 	public static String def = "\"A basophil precursor in the granulocytic series, being a cell intermediate in development between a myeloblast and myelocyte, and containing a few, as yet undifferentiated, cytoplasmic granules.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public BasophilicMyeloblast BasophilicPromyelocyte_develops_from();
+	public BasophilicMyeloblast[] BasophilicPromyelocyte_develops_from();
 }
 
 
@@ -6989,7 +6989,7 @@ interface MastCellProgenitor extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell of the mast cell lineage.\" [GOC:add, http://www.copewithcytokines.de, PMID:16006518, PMID:16330751, PMID:8629001, PMID:9354811]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell MastCellProgenitor_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] MastCellProgenitor_develops_from();
 }
 
 
@@ -7000,7 +7000,7 @@ interface EosinophilicMyeloblast extends Myeloblast {
 	public static String def = "\"A myeloblast committed to the eosinophil lineage. A myeloblast is the most primitive precursor in the granulocytic series, having fine, evenly distributed chromatin, several nucleoli, and a nongranular basophilic cytoplasm.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilProgenitorCell EosinophilicMyeloblast_develops_from();
+	public EosinophilProgenitorCell[] EosinophilicMyeloblast_develops_from();
 }
 
 
@@ -7011,7 +7011,7 @@ interface EosinophilicPromyelocyte extends Promyelocyte {
 	public static String def = "\"A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a myeloblast and myelocyte, and containing a few, as yet undifferentiated, cytoplasmic granules.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public EosinophilicMyeloblast EosinophilicPromyelocyte_develops_from();
+	public EosinophilicMyeloblast[] EosinophilicPromyelocyte_develops_from();
 }
 
 
@@ -7022,7 +7022,7 @@ interface NeutrophilProgenitorCell extends MyeloidProgenitorCell {
 	public static String def = "\"A progenitor cell of the neutrophil lineage.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell NeutrophilProgenitorCell_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] NeutrophilProgenitorCell_develops_from();
 }
 
 
@@ -7033,7 +7033,7 @@ interface Myeloblast extends MyeloidProgenitorCell {
 	public static String def = "\"The most primitive precursor in the granulocytic series, having fine, evenly distributed chromatin, several nucleoli, and a nongranular basophilic cytoplasm.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public GranulocyteMonocyteProgenitorCell Myeloblast_develops_from();
+	public GranulocyteMonocyteProgenitorCell[] Myeloblast_develops_from();
 }
 
 
@@ -7044,7 +7044,7 @@ interface Promyelocyte extends MyeloidProgenitorCell {
 	public static String def = "\"A precursor in the granulocytic series, being a cell intermediate in development between a myeloblast and myelocyte, and containing a few, as yet undifferentiated, cytoplasmic granules.\" [GOC:add, ISBN:0721601464]";
 
 	@Relates("develops_from")
-	public Myeloblast Promyelocyte_develops_from();
+	public Myeloblast[] Promyelocyte_develops_from();
 }
 
 
@@ -7055,7 +7055,7 @@ interface HematopoieticProgenitorCell extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A progenitor cell of any hematopoietic lineage, potentially multipotent.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public HematopoieticStemCell HematopoieticProgenitorCell_develops_from();
+	public HematopoieticStemCell[] HematopoieticProgenitorCell_develops_from();
 }
 
 
@@ -7082,7 +7082,7 @@ interface ImmatureMyeloidDendriticCell extends MyeloidDendriticCell {
 	public static String def = "\"An immature cell of the myeloid dendritic cell lineage, characterized by high levels of antigen uptake via endocytosis, macropinocytosis, and phagocytosis, and typically found resident in the tissues.\" [GOC:add, PMID:9521319]";
 
 	@Relates("develops_from")
-	public Monocyte ImmatureMyeloidDendriticCell_develops_from();
+	public Monocyte[] ImmatureMyeloidDendriticCell_develops_from();
 }
 
 
@@ -7093,7 +7093,7 @@ interface MatureMyeloidDendriticCell extends MyeloidDendriticCell {
 	public static String def = "\"A mature cell of the myeloid dendritic cell lineage, characterized by a high capacity for antigen presentation and typically found in a lymph node.\" [GOC:add, PMID:9521319]";
 
 	@Relates("develops_from")
-	public ImmatureMyeloidDendriticCell MatureMyeloidDendriticCell_develops_from();
+	public ImmatureMyeloidDendriticCell[] MatureMyeloidDendriticCell_develops_from();
 }
 
 
@@ -7120,10 +7120,10 @@ interface GerminalCenterBCell extends MatureBCell {
 	public static String def = "\"A rapidly cycling mature B cell that has distinct phenotypic characteristics and is involved in T-dependent immune responses and located typically in the germinal centers of lymph nodes.\" [GOC:add, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public TransitionalStageBCell GerminalCenterBCell_develops_from();
+	public TransitionalStageBCell[] GerminalCenterBCell_develops_from();
 
 	@Relates("develops_from")
-	public FollicularBCell GerminalCenterBCell_develops_from_1();
+	public FollicularBCell[] GerminalCenterBCell_develops_from_1();
 }
 
 
@@ -7206,7 +7206,7 @@ interface InterneuromastCell extends NeurectodermalCell {
 	public static String def = "\"Interneuromast cell is a neuroectodermal cell deposited by the migrating lateral line primordium between the neuromasts. Interneuromast cells proliferate and migrate to form additional neuromasts.\" [SANBI:mhl]";
 
 	@Relates("develops_from")
-	public NeuroplacodalCell InterneuromastCell_develops_from();
+	public NeuroplacodalCell[] InterneuromastCell_develops_from();
 }
 
 
@@ -7265,7 +7265,7 @@ interface ElicitedMacrophage extends Macrophage {
 	public static String def = "\"A macrophage which develops from an inflammatory monocyte and is recruited into the tissues in response to injury and infection as part of an inflammatory response.\" [GO_REF:0000031, GOC:add, GOC:ana, PMID:15771589]";
 
 	@Relates("develops_from")
-	public InflammatoryMonocyte ElicitedMacrophage_develops_from();
+	public InflammatoryMonocyte[] ElicitedMacrophage_develops_from();
 }
 
 
@@ -7473,7 +7473,7 @@ interface NasalAndBroncialAssociatedLymphoidTissueMacrophage extends MucosaAssoc
 interface LymphNodeSubcapsularSinusMacrophage extends LymphNodeMacrophage {
 	public static String id = "CL:0000887";
 	public static String name = "lymph node subcapsular sinus macrophage";
-	public static String def = "\"A lymph node macrophage found in the subcapsular sinus of lymph nodes that participates in sensing, clearance, and antigen presentation of lymph-borne particulate antigens.\" [GO_REF:0000031, GOC:ana PMID:14668803, PMID:17934446]";
+	public static String def = "\"A lymph node macrophage found in the subcapsular sinus of lymph nodes that participates in sensing, clearance, and antigen presentation of lymph-borne particulate antigens.\" [GO_REF:0000031, GOC:ana PMID\\:14668803, PMID:17934446]";
 }
 
 
@@ -7516,7 +7516,7 @@ interface SmoothMuscleCellDerivedFoamCell extends FoamCell {
 	public static String def = "\"A type of foam cell derived from a smooth muscle cell containing lipids in small vacuoles and typically seen in atherolosclerotic lesions, as well as other conditions.\" [GOC:add]";
 
 	@Relates("develops_from")
-	public SmoothMuscleCell SmoothMuscleCellDerivedFoamCell_develops_from();
+	public SmoothMuscleCell[] SmoothMuscleCellDerivedFoamCell_develops_from();
 }
 
 
@@ -7543,7 +7543,7 @@ interface NaiveThymusDerivedCD4PositiveAlphaBetaTCell extends CD4PositiveAlphaBe
 	public static String def = "\"An antigen inexperienced CD4-positive, alpha-beta T cell with the phenotype CCR7-positive and CD62L-positive. This cell type develops in the thymus.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public CD4PositiveAlphaBetaThymocyte NaiveThymusDerivedCD4PositiveAlphaBetaTCell_develops_from();
+	public CD4PositiveAlphaBetaThymocyte[] NaiveThymusDerivedCD4PositiveAlphaBetaTCell_develops_from();
 }
 
 
@@ -7554,7 +7554,7 @@ interface ActivatedCD4PositiveAlphaBetaTCell extends CD4PositiveAlphaBetaTCell {
 	public static String def = "\"A recently activated CD4-positive, alpha-beta T cell with the phenotype CD69-positive, CD62L-negative, CD127-negative, and CD25-positive.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public NaiveThymusDerivedCD4PositiveAlphaBetaTCell ActivatedCD4PositiveAlphaBetaTCell_develops_from();
+	public NaiveThymusDerivedCD4PositiveAlphaBetaTCell[] ActivatedCD4PositiveAlphaBetaTCell_develops_from();
 }
 
 
@@ -7565,7 +7565,7 @@ interface CD4PositiveAlphaBetaMemoryTCell extends CD4PositiveAlphaBetaTCell, Mem
 	public static String def = "\"CD4-positive, alpha-beta long-lived T cell with the phenotype CD45RO-positive and CD127-positive.\" [GO_REF:0000031, GOC:add, GOC:pam, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell CD4PositiveAlphaBetaMemoryTCell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] CD4PositiveAlphaBetaMemoryTCell_develops_from();
 }
 
 
@@ -7584,7 +7584,7 @@ interface THelper17Cell extends CD4PositiveHelperTCell {
 	public static String def = "\"CD4-positive, alpha-beta T cell with the phenotype RORgamma-t-positive that produces IL-17.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell THelper17Cell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] THelper17Cell_develops_from();
 }
 
 
@@ -7595,7 +7595,7 @@ interface NaiveThymusDerivedCD8PositiveAlphaBetaTCell extends CD8PositiveAlphaBe
 	public static String def = "\"A CD8-positive, alpha-beta T cell that has not experienced activation via antigen contact and has the phenotype CCR7 positive and CD127 positive.\" [GO_REF:0000031, GOC:add, GOC:pam, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public CD8PositiveAlphaBetaThymocyte NaiveThymusDerivedCD8PositiveAlphaBetaTCell_develops_from();
+	public CD8PositiveAlphaBetaThymocyte[] NaiveThymusDerivedCD8PositiveAlphaBetaTCell_develops_from();
 }
 
 
@@ -7606,7 +7606,7 @@ interface Tr1Cell extends CD4PositiveCD25PositiveAlphaBetaRegulatoryTCell {
 	public static String def = "\"CD4-positive alpha-beta T cell with regulatory function that produces IL-10.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell Tr1Cell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] Tr1Cell_develops_from();
 }
 
 
@@ -7617,7 +7617,7 @@ interface InducedTRegulatoryCell extends CD4PositiveCD25PositiveAlphaBetaRegulat
 	public static String def = "\"CD4-positive alpha-beta T cell with the phenotype CD25-positive, CTLA-4-positive, and FoxP3-positive with regulatory function.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell InducedTRegulatoryCell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] InducedTRegulatoryCell_develops_from();
 }
 
 
@@ -7628,7 +7628,7 @@ interface NaturalTRegulatoryCell extends CD4PositiveCD25PositiveAlphaBetaRegulat
 	public static String def = "\"CD4-positive alpha-beta T cell with the phenotype FoxP3-positive, CD25-positive, CD62L-positive, and CTLA-4 positive with regulatory function.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public DoublePositiveAlphaBetaThymocyte NaturalTRegulatoryCell_develops_from();
+	public DoublePositiveAlphaBetaThymocyte[] NaturalTRegulatoryCell_develops_from();
 }
 
 
@@ -7655,7 +7655,7 @@ interface ActivatedCD8PositiveAlphaBetaTCell extends CD8PositiveAlphaBetaTCell {
 	public static String def = "\"A CD8-positive, alpha-beta T cell with the phenotype CD69-positive, CD62L-negative, CD127-negative, CD25-positive, and CCR7-negative.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public NaiveThymusDerivedCD8PositiveAlphaBetaTCell ActivatedCD8PositiveAlphaBetaTCell_develops_from();
+	public NaiveThymusDerivedCD8PositiveAlphaBetaTCell[] ActivatedCD8PositiveAlphaBetaTCell_develops_from();
 }
 
 
@@ -7674,7 +7674,7 @@ interface CD8PositiveAlphaBetaCytokineSecretingEffectorTCell extends CD8Positive
 	public static String def = "\"A CD8-positive, alpha-beta T cell with the phenotype CD69-positive, CD62L-negative, CD127-negative, and CD25-positive, that secretes interferon-gamma.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD8PositiveAlphaBetaTCell CD8PositiveAlphaBetaCytokineSecretingEffectorTCell_develops_from();
+	public ActivatedCD8PositiveAlphaBetaTCell[] CD8PositiveAlphaBetaCytokineSecretingEffectorTCell_develops_from();
 }
 
 
@@ -7685,7 +7685,7 @@ interface CD8PositiveAlphaBetaMemoryTCell extends CD8PositiveAlphaBetaTCell, Mem
 	public static String def = "\"A CD8-positive, alpha-beta T cell with memory phenotype.\" [GO_REF:0000031, GOC:add]";
 
 	@Relates("develops_from")
-	public ActivatedCD8PositiveAlphaBetaTCell CD8PositiveAlphaBetaMemoryTCell_develops_from();
+	public ActivatedCD8PositiveAlphaBetaTCell[] CD8PositiveAlphaBetaMemoryTCell_develops_from();
 }
 
 
@@ -7728,7 +7728,7 @@ interface ImmatureNKTCell extends ImmatureAlphaBetaTCell {
 	public static String def = "\"A CD4-positive alpha-beta T cell expressing NK cell markers and a CD1d-restricted T cell receptor and found in the thymus.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public DoublePositiveAlphaBetaThymocyte ImmatureNKTCell_develops_from();
+	public DoublePositiveAlphaBetaThymocyte[] ImmatureNKTCell_develops_from();
 }
 
 
@@ -7739,7 +7739,7 @@ interface CD8AlphaAlphaPositiveAlphaBetaIntraepithelialTCell extends AlphaBetaIn
 	public static String def = "\"An alpha-beta intraepithelial T cell with the phenotype CD8-alpha-alpha-positive located in the columnar epithelium of the gastrointestinal tract. These cells have a memory phenotype of CD2-negative and CD5-negative.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public CD8PositiveAlphaBetaThymocyte CD8AlphaAlphaPositiveAlphaBetaIntraepithelialTCell_develops_from();
+	public CD8PositiveAlphaBetaThymocyte[] CD8AlphaAlphaPositiveAlphaBetaIntraepithelialTCell_develops_from();
 }
 
 
@@ -7774,7 +7774,7 @@ interface CD8PositiveCD25PositiveAlphaBetaRegulatoryTCell extends CD8PositiveAlp
 	public static String def = "\"A CD8-positive alpha beta-positive T cell with the phenotype FoxP3-positive and having suppressor function.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD8PositiveAlphaBetaTCell CD8PositiveCD25PositiveAlphaBetaRegulatoryTCell_develops_from();
+	public ActivatedCD8PositiveAlphaBetaTCell[] CD8PositiveCD25PositiveAlphaBetaRegulatoryTCell_develops_from();
 }
 
 
@@ -7785,7 +7785,7 @@ interface CD8PositiveCD28NegativeAlphaBetaRegulatoryTCell extends CD8PositiveAlp
 	public static String def = "\"CD8-positive, alpha-beta positive regulatory T cell with the phenotype CD28-negative and FoxP3-positive.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD8PositiveAlphaBetaTCell CD8PositiveCD28NegativeAlphaBetaRegulatoryTCell_develops_from();
+	public ActivatedCD8PositiveAlphaBetaTCell[] CD8PositiveCD28NegativeAlphaBetaRegulatoryTCell_develops_from();
 }
 
 
@@ -7828,7 +7828,7 @@ interface ActivatedCD4PositiveTypeINKTCell extends MatureNKTCell, TypeINKTCell {
 	public static String def = "\"A type I NK T cell that has been recently activated, secrets interferon-gamma and IL-4, and has the phenotype CD4-positive, CD69-positive, and downregulated NK markers.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public CD4PositiveTypeINKTCell ActivatedCD4PositiveTypeINKTCell_develops_from();
+	public CD4PositiveTypeINKTCell[] ActivatedCD4PositiveTypeINKTCell_develops_from();
 }
 
 
@@ -7839,7 +7839,7 @@ interface CD4PositiveTypeINKTCellSecretingInterferonGamma extends MatureNKTCell 
 	public static String def = "\"A mature NK T cell that secretes interferon-gamma and enhances type 1 immune responses.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveTypeINKTCell CD4PositiveTypeINKTCellSecretingInterferonGamma_develops_from();
+	public ActivatedCD4PositiveTypeINKTCell[] CD4PositiveTypeINKTCellSecretingInterferonGamma_develops_from();
 }
 
 
@@ -7850,7 +7850,7 @@ interface CD4PositiveTypeINKTCellSecretingInterleukin4 extends MatureNKTCell {
 	public static String def = "\"A mature NK T cell that predominantly secretes type 2 cytokines such as interleukin-4 and interleukin-13 and enhances type 2 immune responses.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveTypeINKTCell CD4PositiveTypeINKTCellSecretingInterleukin4_develops_from();
+	public ActivatedCD4PositiveTypeINKTCell[] CD4PositiveTypeINKTCellSecretingInterleukin4_develops_from();
 }
 
 
@@ -7861,7 +7861,7 @@ interface ActivatedCD4NegativeCD8NegativeTypeINKTCell extends TypeINKTCell {
 	public static String def = "\"A type I NK T cell that has been recently activated, secretes interferon-gamma and interleukin-4, and has phenotype CD4-negative, CD8-negative, CD69-positive, and downregulated NK markers.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public CD4NegativeCD8NegativeTypeINKTCell ActivatedCD4NegativeCD8NegativeTypeINKTCell_develops_from();
+	public CD4NegativeCD8NegativeTypeINKTCell[] ActivatedCD4NegativeCD8NegativeTypeINKTCell_develops_from();
 }
 
 
@@ -7872,7 +7872,7 @@ interface CD4NegativeCD8NegativeTypeINKTCellSecretingInterferonGamma extends Mat
 	public static String def = "\"A mature NK T cell that secretes interferon-gamma and enhances Th1 immune responses.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4NegativeCD8NegativeTypeINKTCell CD4NegativeCD8NegativeTypeINKTCellSecretingInterferonGamma_develops_from();
+	public ActivatedCD4NegativeCD8NegativeTypeINKTCell[] CD4NegativeCD8NegativeTypeINKTCellSecretingInterferonGamma_develops_from();
 }
 
 
@@ -7883,7 +7883,7 @@ interface CD4NegativeCD8NegativeTypeINKTCellSecretingInterleukin4 extends Mature
 	public static String def = "\"A mature NK T cell that secretes interleukin-4 and enhances Th2 immune responses.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4NegativeCD8NegativeTypeINKTCell CD4NegativeCD8NegativeTypeINKTCellSecretingInterleukin4_develops_from();
+	public ActivatedCD4NegativeCD8NegativeTypeINKTCell[] CD4NegativeCD8NegativeTypeINKTCellSecretingInterleukin4_develops_from();
 }
 
 
@@ -7902,7 +7902,7 @@ interface TypeIINKTCellSecretingInterferonGamma extends MatureNKTCell {
 	public static String def = "\"A type II NK T cell that has been recently activated, secretes interferon-gamma, and has the phenotype CD69-positive and downregulated NK markers.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedTypeIINKTCell TypeIINKTCellSecretingInterferonGamma_develops_from();
+	public ActivatedTypeIINKTCell[] TypeIINKTCellSecretingInterferonGamma_develops_from();
 }
 
 
@@ -7913,7 +7913,7 @@ interface TypeIINKTCellSecretingInterleukin4 extends MatureNKTCell {
 	public static String def = "\"A type II NK T cell that has been recently activated, secretes interleukin-4, and has the phenotype CD69-positive and downregulated NK markers.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedTypeIINKTCell TypeIINKTCellSecretingInterleukin4_develops_from();
+	public ActivatedTypeIINKTCell[] TypeIINKTCellSecretingInterleukin4_develops_from();
 }
 
 
@@ -7924,7 +7924,7 @@ interface CD4PositiveAlphaBetaCytotoxicTCell extends CytotoxicTCell {
 	public static String def = "\"A CD4-positive, alpha-beta T cell that has cytotoxic function.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public ActivatedCD4PositiveAlphaBetaTCell CD4PositiveAlphaBetaCytotoxicTCell_develops_from();
+	public ActivatedCD4PositiveAlphaBetaTCell[] CD4PositiveAlphaBetaCytotoxicTCell_develops_from();
 }
 
 
@@ -7983,7 +7983,7 @@ interface ThymicConventionalDendriticCell extends ConventionalDendriticCell {
 	public static String def = "\"A dendritic cell arising in thymus that has the phenotype CD11c-positive, CD11b-negative, and CD45RA-negative.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public DN1ThymicProTCell ThymicConventionalDendriticCell_develops_from();
+	public DN1ThymicProTCell[] ThymicConventionalDendriticCell_develops_from();
 }
 
 
@@ -7994,7 +7994,7 @@ interface ThymicPlasmacytoidDendriticCell extends PlasmacytoidDendriticCell {
 	public static String def = "\"A plasmacytoid dendritic cell developing in the thymus with phenotype CD11c-negative or low, CD45RA-positive, CD11b-negative, and CD123-positive.\" [GO_REF:0000031, GOC:add, GOC:pam]";
 
 	@Relates("develops_from")
-	public DN1ThymicProTCell ThymicPlasmacytoidDendriticCell_develops_from();
+	public DN1ThymicProTCell[] ThymicPlasmacytoidDendriticCell_develops_from();
 }
 
 
@@ -8021,7 +8021,7 @@ interface LymphocyteOfBLineage extends Lymphocyte {
 	public static String def = "\"A lymphocyte of B lineage is a lymphocyte that expresses CD19 (P15391/CD19_HUMAN; PIRSF016630) on the cell surface. An additional defining characteristic is the commitment to express an immunoglobulin complex.\" [GO_REF:0000031, GOC:add, GOC:rhs, ISBN:0781735149]";
 
 	@Relates("develops_from")
-	public ProBCell LymphocyteOfBLineage_develops_from();
+	public ProBCell[] LymphocyteOfBLineage_develops_from();
 }
 
 
@@ -8104,7 +8104,7 @@ interface PreBIICell extends PrecursorBCell {
 	public static String def = "\"A pre-B-II cell is a precursor B cell that expresses immunoglobulin mu heavy chain (IgHmu+), and lack expression of CD34 (P28906/CD34_HUMAN; PIRSF028749), TdT (P04053/TDT_HUMAN; PIRSF000817), immunoglobulin kappa light chain and immunoglobulin lambda light chain.\" [GO_REF:0000031, GOC:rhs, PMID:9785673]";
 
 	@Relates("develops_from")
-	public ProBCell PreBIICell_develops_from();
+	public ProBCell[] PreBIICell_develops_from();
 }
 
 
@@ -8139,7 +8139,7 @@ interface T2BCell extends TransitionalStageBCell {
 	public static String def = "\"A transitional stage B cell that has the phenotype surface IgM-positive, surface IgD-postive, CD21-positive, CD23-positive, CD62L-negative, and is located in the splenic B follicles.\" [GO_REF:0000031, GOC:msz, PMID:12810111]";
 
 	@Relates("develops_from")
-	public T1BCell T2BCell_develops_from();
+	public T1BCell[] T2BCell_develops_from();
 }
 
 
@@ -8150,7 +8150,7 @@ interface T3BCell extends TransitionalStageBCell {
 	public static String def = "\"A transitional stage B cell that expresses surface IgM and IgD, and CD62L. This cell type appears to be an anergic B cell that does not proliferate upon BCR signaling, is found in the spleen and lymph nodes, and has the phenotype surface IgM-positive, surface IgD-positive, CD21-positive, CD23-positive, and CD62L-positive.\" [GO_REF:0000031, GOC:msz, PMID:12810111, PMID:17174121]";
 
 	@Relates("develops_from")
-	public T2BCell T3BCell_develops_from();
+	public T2BCell[] T3BCell_develops_from();
 }
 
 
@@ -8161,7 +8161,7 @@ interface Bm1BCell extends FollicularBCell {
 	public static String def = "\"A follicular B cell that expresses IgD, but not CD23 or CD38. This naive cell type is activated in the extrafollicular areas through interaction with interdigitating dendritic cells and antigen-specific CD4-positive T cells.\" [GO_REF:0000031, GOC:msz, PMID:17992590, PMID:8006591]";
 
 	@Relates("develops_from")
-	public TransitionalStageBCell Bm1BCell_develops_from();
+	public TransitionalStageBCell[] Bm1BCell_develops_from();
 }
 
 
@@ -8172,7 +8172,7 @@ interface Bm2BCell extends FollicularBCell {
 	public static String def = "\"A follicular B cell that expresses IgD and CD23 and CD38. This naive cell type is activated in the extrafollicular areas via interaction with dendritic cells and antigen specific T cells.\" [GO_REF:0000031, GOC:msz, PMID:17992590, PMID:8006591]";
 
 	@Relates("develops_from")
-	public Bm1BCell Bm2BCell_develops_from();
+	public Bm1BCell[] Bm2BCell_develops_from();
 }
 
 
@@ -8183,7 +8183,7 @@ interface Bm3DeltaBCell extends GerminalCenterBCell {
 	public static String def = "\"A germinal center B cell that develops from a Bm3 B cell.\" [GO_REF:0000031, GOC:add, GOC:msz]";
 
 	@Relates("develops_from")
-	public Bm3BCell Bm3DeltaBCell_develops_from();
+	public Bm3BCell[] Bm3DeltaBCell_develops_from();
 }
 
 
@@ -8194,7 +8194,7 @@ interface Bm2PrimeBCell extends GerminalCenterBCell {
 	public static String def = "\"A germinal center B cell that founds a germinal center, and has the phenotype IgD-positive, CD38-positivie, and CD23-negative.\" [GO_REF:0000031, GOC:msz, PMID:17992590, PMID:8006591]";
 
 	@Relates("develops_from")
-	public Bm2BCell Bm2PrimeBCell_develops_from();
+	public Bm2BCell[] Bm2PrimeBCell_develops_from();
 }
 
 
@@ -8205,7 +8205,7 @@ interface Bm3BCell extends GerminalCenterBCell {
 	public static String def = "\"A germinal center B cell that is rapidly dividing and has the phenotype IgD-negative, CD38-positive, and CD77-positive. Somatic hypermutation of the immunoglobulin V gene region can occur during proliferation of this cell type.\" [GO_REF:0000031, GOC:msz, PMID:8006591]";
 
 	@Relates("develops_from")
-	public Bm2PrimeBCell Bm3BCell_develops_from();
+	public Bm2PrimeBCell[] Bm3BCell_develops_from();
 }
 
 
@@ -8216,7 +8216,7 @@ interface Bm4BCell extends GerminalCenterBCell {
 	public static String def = "\"A germinal center B cell that has the phenotype CD77-negative, IgD-negative, and CD38-positive. These cells have undergone somatic mutation of the B cell receptor.\" [GO_REF:0000031, GOC:msz, PMID:8006591]";
 
 	@Relates("develops_from")
-	public Bm3DeltaBCell Bm4BCell_develops_from();
+	public Bm3DeltaBCell[] Bm4BCell_develops_from();
 }
 
 
@@ -8227,7 +8227,7 @@ interface Bm5BCell extends MemoryBCell {
 	public static String def = "\"A memory B cell arising in the germinal center that is IgD-negative and has undergone somatic mutation of the variable region of the immunoglobulin heavy and light chain genes.\" [GO_REF:0000031, GOC:msz, PMID:8006591]";
 
 	@Relates("develops_from")
-	public Bm4BCell Bm5BCell_develops_from();
+	public Bm4BCell[] Bm5BCell_develops_from();
 }
 
 
@@ -8254,7 +8254,7 @@ interface UnswitchedMemoryBCell extends MemoryBCell {
 	public static String def = "\"An unswitched memory B cell is a memory B cell that has the phenotype IgM-positive and/or IgD-positive, CD27-positive, CD138-negative, IgG-negative, IgE-negative, and IgA-negative.\" [GO_REF:0000031, GOC:rhs, ISBN:0781765196 \"Fundamental Immunology (ed. W.E. Paul)\"]";
 
 	@Relates("develops_from")
-	public Plasmablast UnswitchedMemoryBCell_develops_from();
+	public Plasmablast[] UnswitchedMemoryBCell_develops_from();
 }
 
 
@@ -8273,7 +8273,7 @@ interface ClassSwitchedMemoryBCell extends MemoryBCell {
 	public static String def = "\"A class switched memory B cell is a memory B cell that has undergone Ig class switching and therefore does not express IgM or IgD on the cell surface. These cells usually express CD27 and either IgG, IgE, or IgA on the cell surface.\" [GO_REF:0000031, GOC:rhs, ISBN:0781765196]";
 
 	@Relates("develops_from")
-	public UnswitchedMemoryBCell ClassSwitchedMemoryBCell_develops_from();
+	public UnswitchedMemoryBCell[] ClassSwitchedMemoryBCell_develops_from();
 }
 
 
@@ -8292,7 +8292,7 @@ interface LongLivedPlasmaCell extends PlasmaCell {
 	public static String def = "\"A fully differentiated plasma cell that lives for years, as opposed to months, secretes immunoglobulin, and has the phenotype weakly CD19-positive, CD20-negative, CD38-negative, strongly CD138-positive, MHC Class II-negative, surface immunoglobulin-negative, IgD-negative, and strongly CXCR4-positive. The majority of these cells of this type reside in the bone marrow.\" [GO_REF:0000031, GOC:msz, ISBN:9780781765190 \"Fundamental Immunology, 6ed (Paul,ed), 2003\"]";
 
 	@Relates("develops_from")
-	public ShortLivedPlasmaCell LongLivedPlasmaCell_develops_from();
+	public ShortLivedPlasmaCell[] LongLivedPlasmaCell_develops_from();
 }
 
 
@@ -8303,7 +8303,7 @@ interface ShortLivedPlasmaCell extends PlasmaCell {
 	public static String def = "\"A fully differentiated plasma cell that lives for months.\" [GO_REF:0000031, GOC:msz]";
 
 	@Relates("develops_from")
-	public Plasmablast ShortLivedPlasmaCell_develops_from();
+	public Plasmablast[] ShortLivedPlasmaCell_develops_from();
 }
 
 
@@ -8346,10 +8346,10 @@ interface Plasmablast extends AntibodySecretingCell {
 	public static String def = "\"An activated mature (naive or memory) B cell that is secreting Immunoglobulin, typified by expression of CD27 and CD38 but not CD138.\" [GO_REF:0000031, GOC:msz]";
 
 	@Relates("develops_from")
-	public NaiveBCell Plasmablast_develops_from();
+	public NaiveBCell[] Plasmablast_develops_from();
 
 	@Relates("develops_from")
-	public Bm5BCell Plasmablast_develops_from_1();
+	public Bm5BCell[] Plasmablast_develops_from_1();
 }
 
 
@@ -8448,7 +8448,7 @@ interface ImmatureCD11cLowPlasmacytoidDendriticCell extends CD11cLowPlasmacytoid
 	public static String def = "\"Immature CD11c-low plasmacytoid dendritic cell is a CD11c-low plasmacytoid dendritic cell that has a low plasma membrane amount of CD80 and CD86.\" [GO_REF:0000031, GOC:amm, PMID:15771572, PMID:17850486]";
 
 	@Relates("develops_from")
-	public CommonDendriticProgenitor ImmatureCD11cLowPlasmacytoidDendriticCell_develops_from();
+	public CommonDendriticProgenitor[] ImmatureCD11cLowPlasmacytoidDendriticCell_develops_from();
 }
 
 
@@ -8467,7 +8467,7 @@ interface ImmatureCD11cNegativePlasmacytoidDendriticCell extends CD11cNegativePl
 	public static String def = "\"Immature CD11c-negative plasmacytoid dendritic cell is a CD11c-negative plasmacytoid dendritic cell that lacks plasma membrane part CD80 and has a low plasma membrane amount of CD86 and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:15771572, PMID:17850486]";
 
 	@Relates("develops_from")
-	public CD71PositiveCommonMyeloidProgenitorORCD7NegativeLymphoidProgenitorORCD7PositiveLymphoidProgenitor ImmatureCD11cNegativePlasmacytoidDendriticCell_develops_from();
+	public CD71PositiveCommonMyeloidProgenitorORCD7NegativeLymphoidProgenitorORCD7PositiveLymphoidProgenitor[] ImmatureCD11cNegativePlasmacytoidDendriticCell_develops_from();
 }
 
 
@@ -8494,7 +8494,7 @@ interface ImmatureCD8_alphaNegativeCD11bPositiveDendriticCell extends CD8_alphaN
 	public static String def = "\"Immature CD8_alpha-negative CD11b-positive dendritic cell is a CD8_alpha-negative CD11b-positive dendritic cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CommonDendriticProgenitor ImmatureCD8_alphaNegativeCD11bPositiveDendriticCell_develops_from();
+	public CommonDendriticProgenitor[] ImmatureCD8_alphaNegativeCD11bPositiveDendriticCell_develops_from();
 }
 
 
@@ -8529,7 +8529,7 @@ interface ImmatureCD8_alphaNegativeCD11bNegativeDendriticCell extends CD8_alphaN
 	public static String def = "\"Immature CD8_alpha-negative CD11b-negative dendritic cell is a CD8_alpha-negative CD11b-negative dendritic cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CommonDendriticProgenitor ImmatureCD8_alphaNegativeCD11bNegativeDendriticCell_develops_from();
+	public CommonDendriticProgenitor[] ImmatureCD8_alphaNegativeCD11bNegativeDendriticCell_develops_from();
 }
 
 
@@ -8556,7 +8556,7 @@ interface ImmatureCD8_alphaPositiveCD11bNegativeDendriticCell extends CD8_alphaP
 	public static String def = "\"Immature CD8_alpha-positive CD11b-negative dendritic cell is a CD8_alpha-positive CD11b-negative dendritic cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CommonDendriticProgenitor ImmatureCD8_alphaPositiveCD11bNegativeDendriticCell_develops_from();
+	public CommonDendriticProgenitor[] ImmatureCD8_alphaPositiveCD11bNegativeDendriticCell_develops_from();
 }
 
 
@@ -8599,7 +8599,7 @@ interface ImmatureDermalDendriticCell extends DermalDendriticCell {
 	public static String def = "\"Immature dermal dendritic cell is a dermal dendritic cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CommonDendriticProgenitor ImmatureDermalDendriticCell_develops_from();
+	public CommonDendriticProgenitor[] ImmatureDermalDendriticCell_develops_from();
 }
 
 
@@ -8618,7 +8618,7 @@ interface ImmatureInterstitialDendriticCell extends InterstitialDendriticCell {
 	public static String def = "\"Immature interstitial dendritic cell is a interstitial dendritic cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:17850486]";
 
 	@Relates("develops_from")
-	public CD7NegativeLymphoidProgenitorORGranulocyteMonocyteProgenitor ImmatureInterstitialDendriticCell_develops_from();
+	public CD7NegativeLymphoidProgenitorORGranulocyteMonocyteProgenitor[] ImmatureInterstitialDendriticCell_develops_from();
 }
 
 
@@ -8677,7 +8677,7 @@ interface ImmatureCD8_alphaLowLangerhansCell extends CD8_alphaLowLangerhansCell 
 	public static String def = "\"Immature CD8_alpha-low Langerhans cell is a CD8_alpha-low Langerhans cell that has a low plasma membrane amount of CD80, CD86, and MHCII.\" [GO_REF:0000031, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CD115PositiveMonocyteORCommonDendriticProgenitor ImmatureCD8_alphaLowLangerhansCell_develops_from();
+	public CD115PositiveMonocyteORCommonDendriticProgenitor[] ImmatureCD8_alphaLowLangerhansCell_develops_from();
 }
 
 
@@ -8704,7 +8704,7 @@ interface CD10PositiveCommonLymphoidProgenitor extends CommonLymphoidProgenitor 
 	public static String def = "\"CD10-positive common lymphoid progenitor is a common lymphoid progenitor that has plasma membrane part CD10, CD45RA, and CD34 and lacks plasma membrane part CD19, CD3, and CD4.\" [GO_REF:0000031, GOC:add, GOC:amm, PMID:18082389]";
 
 	@Relates("develops_from")
-	public CD133PositiveHematopoieticStemCell CD10PositiveCommonLymphoidProgenitor_develops_from();
+	public CD133PositiveHematopoieticStemCell[] CD10PositiveCommonLymphoidProgenitor_develops_from();
 }
 
 
@@ -8715,7 +8715,7 @@ interface CD115PositiveMonocyte extends Monocyte {
 	public static String def = "\"CD115-positive monocyte is a monocyte that has plasma membrane part CD115 and CD11b.\" [GO_REF:0000031, GOC:add, GOC:amm, PMID:17952047]";
 
 	@Relates("develops_from")
-	public CD117PositiveCommonMyeloidProgenitor CD115PositiveMonocyte_develops_from();
+	public CD117PositiveCommonMyeloidProgenitor[] CD115PositiveMonocyte_develops_from();
 }
 
 
@@ -8726,7 +8726,7 @@ interface CD117PositiveCommonMyeloidProgenitor extends CommonMyeloidProgenitor {
 	public static String def = "\"CD117-positive common myeloid progenitor is a common myeloid progenitor that has plasma membrane part CD117 and CD34 and lacks plasma membrane part CD2, CD217, CD3, CD4, CD45R, CD5, CD8, GR1, NK1.1, SCA1, and Ter-119.\" [GO_REF:0000031, GOC:add, GOC:amm, PMID:17952047]";
 
 	@Relates("develops_from")
-	public SCA1PositiveHematopoieticStemCell CD117PositiveCommonMyeloidProgenitor_develops_from();
+	public SCA1PositiveHematopoieticStemCell[] CD117PositiveCommonMyeloidProgenitor_develops_from();
 }
 
 
@@ -8745,7 +8745,7 @@ interface CD217PositiveCommonLymphoidProgenitor extends CommonLymphoidProgenitor
 	public static String def = "\"CD217-positive common lymphoid progenitor is a common lymphoid progenitor that has plasma membrane part CD117, CD217, SCA1 and lacks plasma membrane part CD2, CD3, CD4, CD45R, CD5, GR1, CD8, NK1.1, Ter-119.\" [GO_REF:0000031, GOC:add, GOC:amm, PMID:17952047]";
 
 	@Relates("develops_from")
-	public SCA1PositiveHematopoieticStemCell CD217PositiveCommonLymphoidProgenitor_develops_from();
+	public SCA1PositiveHematopoieticStemCell[] CD217PositiveCommonLymphoidProgenitor_develops_from();
 }
 
 
@@ -8756,7 +8756,7 @@ interface CD71PositiveCommonMyeloidProgenitor extends CommonMyeloidProgenitor {
 	public static String def = "\"CD71-positive common myeloid progenitor is a common myeloid progenitor that has plasma membrane part CD34, CD45RA, and CD71 and lacks plasma membrane part CD10, CD19, CD3, CD4, and CD7.\" [GO_REF:0000031, GOC:add, GOC:amm, PMID:16551251]";
 
 	@Relates("develops_from")
-	public CD133PositiveHematopoieticStemCell CD71PositiveCommonMyeloidProgenitor_develops_from();
+	public CD133PositiveHematopoieticStemCell[] CD71PositiveCommonMyeloidProgenitor_develops_from();
 }
 
 
@@ -8767,7 +8767,7 @@ interface CD7NegativeLymphoidProgenitorCell extends LymphoidProgenitorCell {
 	public static String def = "\"CD7-negative lymphoid progenitor cell is a lymphoid progenitor cell that has plasma membrane part CD34 and lacks plasma membrane part CD19, CD3, CD4, CD45RA, and CD7.\" [GO_REF:0000031, GOC:amm, PMID:16551251]";
 
 	@Relates("develops_from")
-	public CD10PositiveCommonLymphoidProgenitor CD7NegativeLymphoidProgenitorCell_develops_from();
+	public CD10PositiveCommonLymphoidProgenitor[] CD7NegativeLymphoidProgenitorCell_develops_from();
 }
 
 
@@ -8778,7 +8778,7 @@ interface CD7PositiveLymphoidProgenitorCell extends LymphoidProgenitorCell {
 	public static String def = "\"CD7-positive lymphoid progenitor cell is a lymphoid progenitor cell that has plasma membrane part CD34 and CD7 and lacks plasma membrane part CD19, CD3, CD4, CD45RA.\" [GO_REF:0000031, GOC:amm, PMID:16551251]";
 
 	@Relates("develops_from")
-	public CD10PositiveCommonLymphoidProgenitor CD7PositiveLymphoidProgenitorCell_develops_from();
+	public CD10PositiveCommonLymphoidProgenitor[] CD7PositiveLymphoidProgenitorCell_develops_from();
 }
 
 
@@ -8789,7 +8789,7 @@ interface CommonDendriticProgenitor extends HematopoieticProgenitorCell {
 	public static String def = "\"Common dendritic precursor is a hematopoietic progenitor cell that has plasma membrane part CD117, CD135, and M-CSFR.\" [GO_REF:0000031, GOC:amm, PMID:16551251]";
 
 	@Relates("develops_from")
-	public CD117PositiveCommonMyeloidProgenitorORCD217PositiveCommonLymphoidProgenitor CommonDendriticProgenitor_develops_from();
+	public CD117PositiveCommonMyeloidProgenitorORCD217PositiveCommonLymphoidProgenitor[] CommonDendriticProgenitor_develops_from();
 }
 
 
@@ -8848,7 +8848,7 @@ interface Iridoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A non-terminally differentiated cell that originates from the neural crest and differentiates into an iridophore.\" [CL:CVS]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Iridoblast_develops_from();
+	public NeuralCrestCell[] Iridoblast_develops_from();
 }
 
 
@@ -8859,7 +8859,7 @@ interface Xanthoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A non-terminally differentiated cell that differentiates into a xanthophore.\" [CL:CVS]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Xanthoblast_develops_from();
+	public NeuralCrestCell[] Xanthoblast_develops_from();
 }
 
 
@@ -8870,7 +8870,7 @@ interface Leucoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A non-terminally differentiated cell that originates from the neural crest and differentiates into a leucophore.\" [CL:CVS]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Leucoblast_develops_from();
+	public NeuralCrestCell[] Leucoblast_develops_from();
 }
 
 
@@ -8881,7 +8881,7 @@ interface PigmentErythroblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A non-terminally differentiated cell that originates from the neural crest and differentiates into an erythrophore.\" [CL:CVS]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell PigmentErythroblast_develops_from();
+	public NeuralCrestCell[] PigmentErythroblast_develops_from();
 }
 
 
@@ -8892,7 +8892,7 @@ interface Cyanoblast extends NonTerminallyDifferentiatedCell {
 	public static String def = "\"A non-terminally differentiated cell that originates from the neural crest and differentiates into a cyanophore.\" [CL:CVS]";
 
 	@Relates("develops_from")
-	public NeuralCrestCell Cyanoblast_develops_from();
+	public NeuralCrestCell[] Cyanoblast_develops_from();
 }
 
 

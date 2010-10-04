@@ -9,12 +9,22 @@
 	<property name="build" location="${javadir}/build"/>
 	<property name="dist"  location="dist"/>
 	<property name="docs"  location="${dist}/docs"/>
+	<property name="data" location="data" />
 	<property name="project"  value="cell-types"/>
 	<property name="latestjar" location="${dist}/lib/${project}.jar" />
 
 	<target name="init">
 		<tstamp/>
 		<mkdir dir="${build}"/>
+		<mkdir dir="${data}" />
+	</target>
+
+	<target name="get-cell-ontology" depends="init" description="downloads the cell.obo ontology file">
+		<get 
+			src="http://obo.cvs.sourceforge.net/viewvc/obo/obo/ontology/anatomy/cell_type/cell.obo" 
+			dest="${data}/cell.obo" 
+			verbose="true"
+			/>
 	</target>
 
 	<target name="docs" depends="init" description="builds documentation" >
@@ -28,7 +38,7 @@
 		</javadoc>
 	</target>
   
-	<target name="build" depends="init" description="compile the source " >
+	<target name="build" depends="init,get-cell-ontology" description="compile the source " >
 		<javac destdir="${build}" includeantruntime="false">
 			<src path="${src}" />
 			<classpath>

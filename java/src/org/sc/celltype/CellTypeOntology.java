@@ -71,6 +71,28 @@ public class CellTypeOntology {
 		}
 	}
 	
+	public DAG getDevelopsFromDag() { 
+		return getRelationshipDag("develops_from");
+	}
+	
+	public DAG getRelationshipDag(String typedef) { 
+		DAG d = new DAG();
+		
+		for(String node : terms.keySet()) { 
+			d.addNode(node);
+		}
+		
+		for(String node : terms.keySet()) { 
+			OBOTerm t =terms.get(node);
+			for(String parent : t.relationship(typedef)) { 
+				OBOTerm p = terms.get(parent);
+				d.addEdge(node, parent);
+			}
+		}
+		
+		return d;
+	}
+	
 	public DAG getIsaDag() { 
 		DAG d = new DAG();
 		for(String node : terms.keySet()) { 

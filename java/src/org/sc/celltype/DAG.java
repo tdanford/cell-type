@@ -33,6 +33,16 @@ public class DAG {
 		return roots;
 	}
 	
+	public Set<String> withNeighbor(String target) { 
+		TreeSet<String> nbs = new TreeSet<String>();
+		for(String node : immediate.keySet()) { 
+			if(immediate.get(node).contains(target)) { 
+				nbs.add(node);
+			}
+		}
+		return nbs;
+	}
+	
 	public DAG flipEdges() { 
 		DAG d = new DAG();
 		for(String n : immediate.keySet()) { 

@@ -10,8 +10,8 @@ import org.sc.obo.OBOOntology;
 import org.sc.obo.OBOParser;
 import org.sc.obo.OBOStanza;
 import org.sc.obo.OBOTerm;
-import org.sc.obo.annotations.JavaExporter;
-import org.sc.obo.annotations.OBOTermCreator;
+import org.sc.obo.annotations.parsers.JavaExporter;
+import org.sc.obo.annotations.parsers.OBOTermCreator;
 
 public class CellTypeOntology {
 	

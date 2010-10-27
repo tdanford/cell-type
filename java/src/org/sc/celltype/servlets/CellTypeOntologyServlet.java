@@ -26,7 +26,7 @@ public class CellTypeOntologyServlet extends HttpServlet {
 		isaDag = ontology.getIsaDag();
 		
 		try {
-			isaDag.calculateConnectivity();
+			isaDag = isaDag.getConnectedDAG();
 		} catch (CycleDetectedException e) {
 			throw new IllegalArgumentException("Cycle detected in ontology is_a graph.");
 		}
@@ -49,12 +49,16 @@ public class CellTypeOntologyServlet extends HttpServlet {
 	
 	public void printDevelopsGraph(PrintWriter writer, int depth, String id, String suffix) { 
 		for(int i = 0; i < depth; i++) { 
-			writer.print("  ");
+			//writer.print("  ");
 		}
 		
+		writer.println("<li>");
+		
 		OBOTerm developsIntoTerm = ontology.getTerm(id);
-		writer.println(String.format("%s ! %s\t%s", id, developsIntoTerm.getName(), suffix));
+		//writer.println(String.format("%s ! %s\t%s", id, developsIntoTerm.getName(), suffix));
+		writer.println(String.format("<a href=\"/celltypes?term=%s\">%s</a>", id, developsIntoTerm.getName()));
 
+		writer.println("<ul>");
 		for(String next : developsIntoDag.edges(id)) { 
 			printDevelopsGraph(writer, depth+1, next, "");
 		}
@@ -67,6 +71,9 @@ public class CellTypeOntologyServlet extends HttpServlet {
 						//String.format("(via %s ! %s)", subclass, subclassTerm.getName()));				
 			}
 		}
+		writer.println("</ul>");
+		
+		writer.println("</li>");
 	}
 
 	/**
@@ -90,22 +97,30 @@ public class CellTypeOntologyServlet extends HttpServlet {
 		}
 
 		response.setStatus(HttpServletResponse.SC_OK);
-		response.setContentType("text");
+		//response.setContentType("text");
+		response.setContentType("text/html");
 		PrintWriter writer = response.getWriter();
 		
 		//oboTerm.print(writer);
-		
+	
+		writer.println("<div>");
 		writer.println(oboTerm.getName());
+		writer.println("<br>");
 		
 		Set<String> developsInto = new TreeSet<String>(developsIntoDag.edges(term));
 		
 		for(String isaID : isaDag.edges(term)) { 
 			OBOTerm isaTerm = ontology.getTerm(isaID);
-			writer.println(String.format("is_a: %s", isaTerm.getName()));
+			writer.println(String.format("is_a: <a href=\"/celltypes?term=%s\">%s</a><br>",
+					isaID,
+					isaTerm.getName()));
 			//developsInto.addAll(developsIntoDag.edges(isaID));
 		}
+		writer.println("</div>");
 		
+		writer.println("<ul>");
 		printDevelopsGraph(writer, 0, term, "");
+		writer.println("</ul>");
 		
 		//developsInto = reduceByIsa(developsInto);
 

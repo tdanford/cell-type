@@ -35,6 +35,10 @@ public class CellTypeOntology {
 	private Map<String,Class> termClasses;
 	private Map<String,CellTerm> cellTerms = new TreeMap<String,CellTerm>();
 	
+	public CellTypeOntology() throws IOException { 
+		this(new CellTypeProperties().getCellTypeOntologyFile());
+	}
+	
 	public CellTypeOntology(File f) throws IOException {
 		ontologyFile = f;
 		
@@ -105,6 +109,11 @@ public class CellTypeOntology {
 				OBOTerm p = terms.get(parent);
 				d.addEdge(node, parent);
 				//System.out.println(String.format("%s -> %s", t.getName(), p.getName()));
+			}
+			
+			for(String parent : t.intersectionOf()) { 
+				OBOTerm p = terms.get(parent);
+				d.addEdge(node, parent);				
 			}
 		}
 		

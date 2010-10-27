@@ -131,7 +131,4 @@ public class DAG {
 	}
 }
 
-class CycleDetectedException extends Exception { 
-	public CycleDetectedException() { super(); }
-	public CycleDetectedException(String n) { super(n); }
-}
+

@@ -13,6 +13,13 @@ public class DAG {
 		connected = new TreeMap<String,Set<String>>();
 	}
 	
+	public DAG(Map<String,Set<String>> imm) { 
+		this();
+		for(String key : imm.keySet()) { 
+			immediate.put(key, new TreeSet<String>(imm.get(key)));
+		}
+	}
+	
 	public void addNode(String str) { 
 		if(!immediate.containsKey(str)) { 
 			immediate.put(str, new TreeSet<String>());
@@ -89,6 +96,11 @@ public class DAG {
 	
 	public Set<String> getConnected(String n1) { 
 		return new TreeSet<String>(connected.get(n1));
+	}
+	
+	public DAG getConnectedDAG() throws CycleDetectedException { 
+		if(connected.isEmpty()) { calculateConnectivity(); }
+		return new DAG(connected);
 	}
 	
 	public void calculateConnectivity() throws CycleDetectedException { 

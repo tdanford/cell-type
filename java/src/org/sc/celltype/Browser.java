@@ -15,7 +15,7 @@ import org.sc.obo.OBOTerm;
 public class Browser extends JPanel {
 
 	public static void main(String[] args) throws IOException { 
-		CellTypeOntology ont = new CellTypeOntology(new File("/Users/tdanford/Documents/Ontologies/cell.obo"));
+		CellTypeOntology ont = new CellTypeOntology(new File(args[0]));
 		new Browser(ont, "CL:0000222", "develops_from").new Frame();
 	}
 	
